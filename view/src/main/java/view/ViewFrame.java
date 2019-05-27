@@ -4,6 +4,8 @@ import javax.swing.JFrame;
 
 public class ViewFrame extends JFrame
 {
+	private static final long serialVersionUID = 1L;
+
 	public ViewFrame() 
 	{
 		JFrame jframe = new JFrame();
@@ -16,6 +18,5 @@ public class ViewFrame extends JFrame
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jframe.setTitle("Boulder Dash");
 		jframe.setContentPane(viewpanel);
-	}
+	}	
 }
-

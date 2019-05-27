@@ -2,7 +2,6 @@ package view;
 
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
@@ -11,6 +10,9 @@ import javax.swing.JPanel;
 
 public class ViewPanel extends JPanel
 {	
+	private static final long serialVersionUID = 1L;
+	public int X = 1;
+	protected int Y = 1;
 	public ViewPanel()
 	{
 		
@@ -21,9 +23,8 @@ public class ViewPanel extends JPanel
 		Image image;
 		try 
 		{
-
 				image = ImageIO.read(new File("../view/oui.jpg"));
-				graphics.drawImage(image, 16, 16, this);
+				graphics.drawImage(image, this.X*16, this.Y*16, this);
 				
 		}
 
