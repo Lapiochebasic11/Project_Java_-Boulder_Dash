@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package view;
 
 import java.awt.event.KeyEvent;
@@ -80,3 +81,14 @@ public final class View implements IView, Runnable {
 		this.viewFrame.setController(controller);
 	}
 }
+=======
+package view;
+
+public class View
+{
+	public View() 
+	{
+		ViewFrame viewframe = new ViewFrame();
+	}
+}
+>>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash

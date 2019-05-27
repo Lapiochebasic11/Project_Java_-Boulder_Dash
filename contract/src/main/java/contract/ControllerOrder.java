@@ -5,6 +5,7 @@ package contract;
  *
  * @author Jean-Aymeric Diet
  */
+<<<<<<< HEAD
 public enum ControllerOrder {
 
 	/** move Up. */
@@ -17,4 +18,9 @@ public enum ControllerOrder {
 	Down,
 	/** nothing. */
 	Nothing,
+=======
+public enum ControllerOrder 
+{
+	UP, DOWN, LEFT, RIGHT
+>>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
 }
