@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class ViewPanel extends JPanel
-{
+{	
 	public ViewPanel()
 	{
 		
@@ -18,13 +18,15 @@ public class ViewPanel extends JPanel
 	
 	public void paint(Graphics graphics)
 	{
-		BufferedImage image;
+		Image image;
 		try 
 		{
-			getClass().getResource("../pictures/oui.jpg");
-			image = ImageIO.read(new File("‪../pictures/oui.jpg"));
-			graphics.drawImage(image, 50, 50, this);
-		} 
+
+				image = ImageIO.read(new File("C:/Users/vilas/git/Project_Java_-Boulder_Dash/view/oui.jpg"));
+				graphics.drawImage(image, 16, 16, this);
+				
+		}
+
 		catch (IOException e) 
 		{
 			e.printStackTrace();
