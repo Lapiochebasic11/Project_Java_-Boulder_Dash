@@ -22,7 +22,7 @@ public class ViewPanel extends JPanel
 		try 
 		{
 
-				image = ImageIO.read(new File("C:/Users/vilas/git/Project_Java_-Boulder_Dash/view/oui.jpg"));
+				image = ImageIO.read(new File("../view/oui.jpg"));
 				graphics.drawImage(image, 16, 16, this);
 				
 		}
