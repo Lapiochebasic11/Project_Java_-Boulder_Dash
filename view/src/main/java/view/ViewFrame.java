@@ -4,7 +4,12 @@ import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import view.ViewPanel;
+import view.View;
 
 public class ViewFrame extends JFrame implements KeyListener
 {
@@ -14,6 +19,9 @@ public class ViewFrame extends JFrame implements KeyListener
 	{
 		JFrame jframe = new JFrame();
 		ViewPanel viewpanel = new ViewPanel();
+		jframe.setContentPane(viewpanel);
+		ImageIcon img = new ImageIcon("../ressources/icon.png");
+		jframe.setIconImage(img.getImage());
 		
 		/*int width = 1920;
 		int height = 1080;

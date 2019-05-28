@@ -9,4 +9,5 @@ public abstract class ElementFactory {
 	public static Ground Ground = new Ground();
 	public static Player Player = new Player();
 	public static Wall Wall = new Wall();
-}
+	
+    }

@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class ViewPanel extends JPanel
@@ -26,7 +27,7 @@ public class ViewPanel extends JPanel
 		Image image;
 		try 
 		{
-				image = ImageIO.read(new File("../view/oui.jpg"));
+				image = ImageIO.read(new File("../ressources/terre.jpg"));
 				graphics.drawImage(image, this.X*16, this.Y*16, this);
 		}
 
