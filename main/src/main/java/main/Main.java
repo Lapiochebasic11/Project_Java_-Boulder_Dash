@@ -7,13 +7,11 @@ package main;
 import java.awt.Dimension;
 import java.sql.SQLException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import view.ViewFrame;
-import contract.ControllerOrder;
-import controller.Controller;
-import model.Model;
 import view.View;
+import view.ViewFrame;
 
 /**
  * The Class Main.
@@ -24,6 +22,7 @@ public abstract class Main
 {
     public static void main(final String[] args) throws SQLException 
     { 
+<<<<<<< HEAD
    
     	Model model = new Model();
 
@@ -47,6 +46,10 @@ public abstract class Main
     	});
     	
         final Model model = new Model();
+=======
+    	View view = new View(); 	
+        /*final Model model = new Model();
+>>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
         final View view = new View(model);
         final Controller controller = new Controller(view, model);
         view.setController(controller);

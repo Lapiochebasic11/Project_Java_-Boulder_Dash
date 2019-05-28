@@ -4,12 +4,9 @@ import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import java.awt.event.KeyEvent;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import view.ViewPanel;
-import view.View;
 
 public class ViewFrame extends JFrame implements KeyListener
 {
@@ -19,34 +16,33 @@ public class ViewFrame extends JFrame implements KeyListener
 	{
 		JFrame jframe = new JFrame();
 		ViewPanel viewpanel = new ViewPanel();
-		jframe.setContentPane(viewpanel);
-		ImageIcon img = new ImageIcon("../ressources/icon.png");
-		jframe.setIconImage(img.getImage());
-		
-		/*int width = 1920;
-		int height = 1080;
-		jframe.setSize(width, height);
-		jframe.setMinimumSize(new Dimension(1920, 1080));
-		jframe.pack();
-		jframe.setVisible(true);
-		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		jframe.setTitle("Boulder Dash");
-		jframe.setContentPane(viewpanel);*/
 
-        this.draw=new ViewPanel();
+		this.draw = new ViewPanel();
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
 	}
-<<<<<<< HEAD
-}
-=======
-	
-	 public void keyPressed(KeyEvent e) 
+
+	public void Windows()
+	{
+		ViewFrame frame = new ViewFrame();
+		
+		frame.setTitle("Boulder Dash");
+        frame.setResizable(true);
+        frame.setSize(1920, 1080);
+        frame.setMinimumSize(new Dimension(1920, 1080));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(frame.draw);
+        frame.pack();
+        frame.setVisible(true);
+        
+        ImageIcon img = new ImageIcon("../ressources/icon.png");
+		frame.setIconImage(img.getImage());
+	}
+
+	 	public void keyPressed(KeyEvent e) 
 	 	{
-	        int a = 0;
-	        a = a + 1; 
-			System.out.println(a);
+
 	    }
 
 	    public void keyReleased(KeyEvent e) 
@@ -64,7 +60,6 @@ public class ViewFrame extends JFrame implements KeyListener
 	    
 	    public void keyTyped(KeyEvent e) 
 	    {
-	        System.out.println("keyTyped");
+
 	    }
 }
->>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
