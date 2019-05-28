@@ -5,7 +5,8 @@ public class View
 
 	public View() 
     {
-        ViewFrame viewframe = new ViewFrame();
+		ViewFrame viewframe = new ViewFrame();
+		viewframe.Windows();
     }
 
 }
