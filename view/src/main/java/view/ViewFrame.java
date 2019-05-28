@@ -22,7 +22,7 @@ public class ViewFrame extends JFrame implements KeyListener
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
 	}
-	
+
 	public void Windows()
 	{
 		ViewFrame frame = new ViewFrame();
