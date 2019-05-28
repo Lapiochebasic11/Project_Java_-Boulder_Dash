@@ -1,12 +1,15 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public class Exit extends Element {
 	
+	public static String sprite = "Exit.jpg";
+	
 	Exit(){
-		sprite = "Exit.jpg";
-	}
+		super(sprite);
+}
+
 
 	public void walk(int x, int y, Map map) {
 		map.setWin(true);

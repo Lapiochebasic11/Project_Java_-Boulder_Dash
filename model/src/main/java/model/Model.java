@@ -1,85 +1,29 @@
 package model;
 
 import java.sql.SQLException;
-import java.util.Observable;
 
-import contract.IModel;
-import entity.HelloWorld;
+public class Model {
+	
+	
+	private Map map;
 
-/**
- * The Class Model.
- *
- * @author Jean-Aymeric Diet
- */
-public final class Model extends Observable implements IModel {
+	public Model() throws SQLException {
+		map = new Map();
 
-	/** The helloWorld. */
-	private HelloWorld helloWorld;
+	}
+
+	public Map getMap() {
+		return this.map;
+		
+	}
 
 	/**
-	 * Instantiates a new model.
+	 * 
+	 * @param map
 	 */
-	public Model() {
-		this.helloWorld = new HelloWorld();
+	public void setMap(Map map) {
+		this.map = map;
 	}
 
-	/**
-     * Gets the hello world.
-     *
-     * @return the hello world
-     */
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IModel#getMessage()
-	 */
-	public HelloWorld getHelloWorld() {
-		return this.helloWorld;
-	}
 
-	/**
-     * Sets the hello world.
-     *
-     * @param helloWorld
-     *            the new hello world
-     */
-	private void setHelloWorld(final HelloWorld helloWorld) {
-		this.helloWorld = helloWorld;
-		this.setChanged();
-		this.notifyObservers();
-	}
-
-	/**
-     * Load hello world.
-     *
-     * @param code
-     *            the code
-     */
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IModel#getMessage(java.lang.String)
-	 */
-	public void loadHelloWorld(final String code) {
-		try {
-			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setHelloWorld(daoHelloWorld.find(code));
-		} catch (final SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-     * Gets the observable.
-     *
-     * @return the observable
-     */
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IModel#getObservable()
-	 */
-	public Observable getObservable() {
-		return this;
-	}
 }

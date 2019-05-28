@@ -1,14 +1,15 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public class Enemy extends ElementMobile {
 	
+	public static String sprite = "Enemy.jpg";
+	
 	Enemy(){
-		sprite = "Enemy.jpg";
-	}
-	
-	
+		super(sprite);
+}
+
 	public void createDiamond(int x, int y, Map map){
 		
 		int i,j;

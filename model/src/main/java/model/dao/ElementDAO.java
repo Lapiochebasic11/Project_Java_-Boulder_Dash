@@ -1,11 +1,16 @@
-package model;
+package model.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import AbstractDAO;
 
-public abstract class DAOHelloWorld {
+/**
+ * <h1>The Class ElementDAO.</h1>
+ * 
+ * @author Hugo Routy
+ * @version 1.0
+ */
+public abstract class ElementDAO extends AbstractDAO {
 	/**
 	 * Gets the elements of a row in map of lv1
 	 */

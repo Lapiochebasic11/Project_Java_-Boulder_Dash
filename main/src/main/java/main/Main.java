@@ -5,6 +5,7 @@
 package main;
 
 import java.awt.Dimension;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
 
@@ -21,9 +22,14 @@ import view.View;
  */
 public abstract class Main 
 {
-    public static void main(final String[] args) 
+    public static void main(final String[] args) throws SQLException 
     { 
-    	View view = new View();
+   
+    	Model model = new Model();
+
+    	
+    	/*
+    	 * View view = new View();
     	javax.swing.SwingUtilities.invokeLater(new Runnable() 
     	{
     		public void run() 
@@ -40,7 +46,7 @@ public abstract class Main
     		}
     	});
     	
-        /*final Model model = new Model();
+        final Model model = new Model();
         final View view = new View(model);
         final Controller controller = new Controller(view, model);
         view.setController(controller);

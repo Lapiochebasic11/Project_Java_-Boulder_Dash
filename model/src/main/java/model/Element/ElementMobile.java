@@ -1,9 +1,15 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public abstract class ElementMobile extends Element {
 	
+
+	public ElementMobile(String sprite) {
+		super(sprite);
+	}
+
+
 	String sprite;
 	
 	public void moveUp(int x, int y,Map map) {
