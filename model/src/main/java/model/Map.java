@@ -24,44 +24,25 @@ public class Map {
 	private boolean lose= false;
 
 	
-	
 	public Map() throws SQLException{
-		setWidth(MetadataDAO.getMapMetadataWidth(mapID));
-		setHeight(MetadataDAO.getMapMetadataHeight(mapID));
-		setScoreNeed(MetadataDAO.getMapMetadataScoreNeed(mapID));
-		this.onTheMap = new model.Element.Element [width][height];
-		fillOnTheMap();
-		
-	}
+        setWidth(MetadataDAO.getMapMetadataWidth(mapID));
+        setHeight(MetadataDAO.getMapMetadataHeight(mapID));
+        setScoreNeed(MetadataDAO.getMapMetadataScoreNeed(mapID));
+        this.onTheMap = new model.Element.Element [width][height];
+        fillOnTheMap();
 
-<<<<<<< HEAD
-		setWidht();
-		setHeight();
-		setScoreNeed();
-		setEndTime();
-		this.onTheMap = new Element[widht][height];
-		putOnMap();
-	}
-	
-	public void putOnMap() {
-		int x,y;
-		int ID = mapID;
-		for(y=0; y <height;y++) {
-			for (x=0; x<widht;x++) {
-				setOnTheMapXY(ElementFactory.getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
-=======
-		public void fillOnTheMap() throws SQLException {
-			int x,y;
-			int ID = mapID;
-			for(y=0; y <height;y++){
-				for (x=0; x<width; x++){
-					setOnTheMapXY(ElementFactory.getObject(ElementDAO.getElement(ID,x,y)), x, y);
-				}
->>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
-			}
-		
-		}
-		
+    }
+
+        public void fillOnTheMap() throws SQLException {
+            int x,y;
+            int ID = mapID;
+            for(y=0; y <height;y++){
+                for (x=0; x<width; x++){
+                    setOnTheMapXY(ElementFactory.getObject(ElementDAO.getElement(ID,x,y)), x, y);
+                }
+            }
+
+        }		
 
 	public int getHeight() {
 		return height;

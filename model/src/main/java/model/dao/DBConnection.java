@@ -2,6 +2,7 @@ package model.dao;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 /**
@@ -23,7 +24,7 @@ final class BoulderDashBDDConnector {
 	/**
 	 * The url.
 	 */
-	private static String url = "http://localhost/phpmyadmin/db_structure.php?server=1&db=boulderdash";
+	private static String url = "jdbc:mysql://localhost/boulderdash?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
 	/**
 	 * The connection.
 	 */
