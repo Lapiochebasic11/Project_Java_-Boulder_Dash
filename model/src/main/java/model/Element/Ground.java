@@ -1,12 +1,15 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public class Ground extends Element {
 	
+	public static String sprite = "Ground.jpg";
+	
 	Ground(){
-		sprite = "Ground.jpg";
-	}
+		super(sprite);
+}
+
 	
 	public void walk(int x, int y, char direction, Map map) {
 		dead(x,y,map);

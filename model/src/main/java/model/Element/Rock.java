@@ -1,17 +1,17 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public class Rock extends ElementMobile{
 	
 	
+	public static String sprite = "Rock.jpg";
 	boolean movement = false;
+	
 	Rock(){
-		sprite = "Rock.jpg";
-	}
-	
+		super(sprite);
+}
 
-	
 	public void walk(int x, int y,char direction, Map map) {
 switch (direction){
 		

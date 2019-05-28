@@ -1,10 +1,14 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public abstract class Element  {
 
-	protected String sprite; 
+	String sprite; 
+	
+	public Element(String sprite) {
+		this.sprite = sprite;
+	}
 
 	public void dead(int x, int y, Map map) {
 		
@@ -15,6 +19,7 @@ public abstract class Element  {
 	}
 	public String getSprite() {
 		return sprite;
+		
 	}
 	public void setSprite(String sprite) {
 		this.sprite = sprite;

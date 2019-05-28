@@ -1,13 +1,16 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public class Player extends ElementMobile {
 	
 
+	public static String sprite = "Player.jpg";
+	
 	Player(){
-		sprite = "Player.jpg";
-	}
+		super(sprite);
+}
+
 	
 	public void dead(int x, int y,Map map) {
 		map.setOnTheMapXY(new Empty(), x, y);

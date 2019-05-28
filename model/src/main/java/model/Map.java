@@ -1,25 +1,40 @@
 package model;
 
+
 import java.sql.SQLException;
 
-import Element.Element;
-import Element.ElementFactory;
+import model.Element.Element;
+import model.Element.ElementFactory;
+import model.dao.ElementDAO;
+import model.dao.MetadataDAO;
+
+
 
 public class Map {
 	
 	private int mapID = 1;
 	private int height;
-	private int widht;
+	private int width;
 	private Element[][] onTheMap;
 	private int score = 0;
 	private int scoreNeed;
 	private int time;
 	private int endtime;
 	private boolean win = false;
-	private boolean lose = false;
+	private boolean lose= false;
+
+	
 	
 	public Map() throws SQLException{
+		setWidth(MetadataDAO.getMapMetadataWidth(mapID));
+		setHeight(MetadataDAO.getMapMetadataHeight(mapID));
+		setScoreNeed(MetadataDAO.getMapMetadataScoreNeed(mapID));
+		this.onTheMap = new model.Element.Element [width][height];
+		fillOnTheMap();
+		
+	}
 
+<<<<<<< HEAD
 		setWidht();
 		setHeight();
 		setScoreNeed();
@@ -34,10 +49,18 @@ public class Map {
 		for(y=0; y <height;y++) {
 			for (x=0; x<widht;x++) {
 				setOnTheMapXY(ElementFactory.getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
+=======
+		public void fillOnTheMap() throws SQLException {
+			int x,y;
+			int ID = mapID;
+			for(y=0; y <height;y++){
+				for (x=0; x<width; x++){
+					setOnTheMapXY(ElementFactory.getObject(ElementDAO.getElement(ID,x,y)), x, y);
+				}
+>>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
 			}
+		
 		}
-				
-	}
 		
 
 	public int getHeight() {
@@ -49,11 +72,11 @@ public class Map {
 	}
 
 	public int getWidht() {
-		return widht;
+		return width;
 	}
 
-	public void setWidht(int widht) {
-		this.widht = widht;
+	public void setWidth(int width) {
+		this.width = width;
 	}
 
 	public int getScoreNeed() {
@@ -106,3 +129,4 @@ public class Map {
 
 
 }
+

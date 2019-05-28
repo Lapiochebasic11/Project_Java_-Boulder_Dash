@@ -1,8 +1,10 @@
-package Element;
+package  model.Element;
 
 import model.Map;
 
 public class Diamond extends Rock   {
+	
+	public static String sprite = "Diamond.jpg";
 	
 
 	public void walk(int x, int y, char direction, Map map) {
