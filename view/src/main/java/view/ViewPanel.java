@@ -6,13 +6,16 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class ViewPanel extends JPanel
 {	
 	private static final long serialVersionUID = 1L;
+	
 	public int X = 1;
 	protected int Y = 1;
+	
 	public ViewPanel()
 	{
 		
@@ -25,7 +28,6 @@ public class ViewPanel extends JPanel
 		{
 				image = ImageIO.read(new File("../view/oui.jpg"));
 				graphics.drawImage(image, this.X*16, this.Y*16, this);
-				
 		}
 
 		catch (IOException e) 
@@ -33,4 +35,25 @@ public class ViewPanel extends JPanel
 			e.printStackTrace();
 		}
 	}
-}
+	
+	public void moveRight() {
+        X = X + 2;
+        repaint();
+    }
+
+    public void moveLeft() {
+        X = X - 2;
+        repaint();
+    }
+
+    public void moveDown() {
+        Y = Y + 2;
+        repaint();
+    }
+
+    public void moveUp() {
+        Y = Y - 2;
+        repaint();
+    }
+	
+}	

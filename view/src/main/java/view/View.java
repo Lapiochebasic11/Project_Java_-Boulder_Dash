@@ -1,7 +1,5 @@
 package view;
 
-import java.awt.event.KeyEvent;
-
 public class View
 {
 
