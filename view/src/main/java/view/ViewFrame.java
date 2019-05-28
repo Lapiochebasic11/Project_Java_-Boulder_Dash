@@ -42,20 +42,20 @@ public class ViewFrame extends JFrame implements KeyListener
 
 	 	public void keyPressed(KeyEvent e) 
 	 	{
-
+	 		 if(e.getKeyCode()== KeyEvent.VK_RIGHT)
+		            draw.moveRight();
+		        else if(e.getKeyCode()== KeyEvent.VK_LEFT)
+		            draw.moveLeft();
+		        else if(e.getKeyCode()== KeyEvent.VK_DOWN)
+		            draw.moveDown();
+		        else if(e.getKeyCode()== KeyEvent.VK_UP)
+		            draw.moveUp();
+		        repaint();
 	    }
 
 	    public void keyReleased(KeyEvent e) 
 	    {
-	        if(e.getKeyCode()== KeyEvent.VK_RIGHT)
-	            draw.moveRight();
-	        else if(e.getKeyCode()== KeyEvent.VK_LEFT)
-	            draw.moveLeft();
-	        else if(e.getKeyCode()== KeyEvent.VK_DOWN)
-	            draw.moveDown();
-	        else if(e.getKeyCode()== KeyEvent.VK_UP)
-	            draw.moveUp();
-	        repaint();
+
 	    }
 	    
 	    public void keyTyped(KeyEvent e) 

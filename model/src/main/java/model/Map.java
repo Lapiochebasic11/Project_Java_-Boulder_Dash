@@ -33,7 +33,7 @@ public class Map {
 		int ID = mapID;
 		for(y=0; y <height;y++) {
 			for (x=0; x<widht;x++) {
-				setOnTheMapXY(ElementFactory..getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
+				setOnTheMapXY(ElementFactory.getFromTableSymbol(ElementDAO.getElement(ID,x,y)), x, y);
 			}
 		}
 				
