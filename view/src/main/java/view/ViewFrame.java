@@ -28,22 +28,4 @@ public class ViewFrame extends JFrame
 		ImageIcon img = new ImageIcon("../ressources/icon.png");
 		jframe.setIconImage(img.getImage());
 	}
-	
-	public void keyPressed(KeyEvent e) {
-		int keyCode = e.getKeyCode();
-	    switch( keyCode ) { 
-	        case KeyEvent.VK_UP:
-	        	System.out.print("haut ! fdp ca marche !");
-	            break;
-	        case KeyEvent.VK_DOWN:
-	            // handle down 
-	            break;
-	        case KeyEvent.VK_LEFT:
-	            // handle left
-	            break;
-	        case KeyEvent.VK_RIGHT :
-	            // handle right
-	            break;
-	     }
-	}
 }
