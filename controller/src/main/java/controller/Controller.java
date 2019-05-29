@@ -1,20 +1,19 @@
 package controller;
 
-import view.View;
-import view.ViewFrame;
-import model.* ;
+import java.io.IOException;
 
-public class Controller
-{
+import model.* ;
+import view.View; 
+
+public class Controller{
 
 	private Model model;
-	private ViewFrame view;
+	private View view;
 	public static int frameRate = 10;
 	private int num = 0;
 	
-	public void play() 
-	{
-		view.Windows(model.getMap().getWidth() , model.getMap().getHeight() );
+	public void play() throws IOException {
+		view.show(model.getMap().getWidth() , model.getMap().getHeight() );
 		while (model.getMap().getWin() == false){
 			
 			try {
@@ -22,25 +21,24 @@ public class Controller
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			num = view.ViewFrame();
+			num = view.KeyUser();
 			for(int y = model.getMap().getHeight() -1 ; y >= 0 ; y--){
 				for(int x = 0; x < model.getMap().getWidth()  ; x++){
-					//System.out.println(model.getMap().getOnTheMapXY(x, y).getSprite());
 					
 					
-					if (model.getMap().getOnTheMapXY(x,y).getSprite()=="PLAYER.png"){
-						model.getMap().getOnTheMapXY(x, y).move(x, y ,/*view.KeyUser()*/num , model.getMap());
+					if (model.getMap().getOnTheMapXY(x,y).getSprite()=="PLAYER.jpg"){
+						model.getMap().getOnTheMapXY(x, y).move(x, y , num , model.getMap());
 						num = 0;
 					}
 					else{
-						model.getMap().getOnTheMapXY(x, y).move(x, y ,/*view.KeyUser()*/(int) (Math.random() * 4 ), model.getMap());
+						model.getMap().getOnTheMapXY(x, y).move(x, y , (int) (Math.random() * 4 ), model.getMap());
 					}
 					
-					if (model.getMap().getScoreNeed() == model.getMap().getScore() ){
-						if (model.getMap().getOnTheMapXY( model.getMap().getDoorX(),model.getMap().getDoorY()).getSprite() =="PLAYER.png")  {
-							model.getMap().setLevelEnded(true );
+					if (model.getMap().getScoreNeeded() == model.getMap().getScore() ){
+						if (model.getMap().getOnTheMapXY( model.getMap().getExitX(),model.getMap().getExitY()).getSprite() =="PLAYER.jpg")  {
+							model.getMap().setWin(true );
 						}
-						model.getMap().spawnDoor();
+						model.getMap().spawnExit();
 					}
 				}
 				
@@ -57,43 +55,43 @@ public class Controller
 					
 					switch (model.getMap().getOnTheMapXY(x, y).getSprite())
 					{
-						case "ROCK.png":
+						case "ROCK.jpg":
 							System.out.print("O ");
 							break;
 
-						case "BORDER.png":
+						case "BORDER.jpg":
 							System.out.print("[]");
 							break;
 						
-						case "DIAMOND.png":
+						case "DIAMOND.jpg":
 							System.out.print("V ");
 							break;
 						
-						case "DESTRUCTIBLEWALL.png":
+						case "DESTRUCTIBLEWALL.jpg":
 							System.out.print("[]");
 							break;
 						
-						case "DOOR.png":
+						case "DOOR.jpg":
 							System.out.print("D ");
 							break;
 						
-						case "SOIL.png":
+						case "SOIL.jpg":
 							System.out.print("* ");
 							break;
 						
-						case "PLAYER.png":
+						case "PLAYER.jpg":
 							System.out.print("P ");
 							break;
 
-						case "ENEMY.png":
+						case "ENEMY.jpg":
 							System.out.print("X ");
 							break;
 
-						case "ENEMY2.png":
+						case "ENEMY2.jpg":
 							System.out.print("");
 							break;
 
-						case "VOID.png":
+						case "VOID.jpg":
 							System.out.print("_ ");
 							break;
 					}
@@ -104,7 +102,7 @@ public class Controller
 			System.out.println("");
 			
 		}
-		if (model.getMap().getLevelLost() == false ){
+		if (model.getMap().getLose() == false ){
 			System.out.println("Success");
 		}
 		else{
@@ -120,28 +118,15 @@ public class Controller
 		return this.view;
 	}
 
-	/**
-	 * 
-	 * @param view
-	 * @param model
-	 */
 	public Controller(View view, Model model) {
 		this.view = view;
 		this.model = model;
 	}
 
-	/**
-	 * 
-	 * @param model
-	 */
 	public void setModel(Model model) {
 		this.model = model;
 	}
 
-	/**
-	 * 
-	 * @param view
-	 */
 	public void setView(View view) {
 		this.view = view;
 	}

@@ -17,13 +17,8 @@ public class Model {
 		
 	}
 
-	/**
-	 * 
-	 * @param map
-	 */
 	public void setMap(Map map) {
 		this.map = map;
 	}
-
 
 }

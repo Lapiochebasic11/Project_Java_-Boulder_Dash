@@ -1,5 +1,6 @@
 package main;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import controller.Controller;
@@ -8,7 +9,7 @@ import view.View;
 
 public abstract class Main 
 {
-    public static void main(final String[] args) throws SQLException 
+    public static void main(final String[] args) throws SQLException, IOException
     { 
    	
     	Model model = new Model();

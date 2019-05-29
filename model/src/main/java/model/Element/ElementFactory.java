@@ -1,7 +1,5 @@
 package  model.Element;
 
-
-
 public abstract class ElementFactory {
 	
 	public static Rock Rock = new Rock();
@@ -18,7 +16,7 @@ public abstract class ElementFactory {
 	public static Element getObject(String object) {
 		
 		for (final Element Element : element ) {
-			if (Element.getSprite().compareTo(object+"png") == 0) {
+			if (Element.getSprite().compareTo(object+".jpg") == 0) {
 				return Element;
 			}
 		}

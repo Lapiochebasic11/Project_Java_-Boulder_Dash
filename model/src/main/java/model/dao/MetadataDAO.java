@@ -24,7 +24,11 @@ public abstract class MetadataDAO extends AbstractDAO {
 	 */
 	private static String sqlMapMetadataDiamondsNeeded = "{call findMapMetadataDiamondsNeeded(?)}";
 
-	
+	private static String sqlMapMetadataDoorX = "{call findMapMetadataDoorX(?)}";
+	/**
+	 * Gets the door Y coordinate of the map
+	 */
+	private static String sqlMapMetadataDoorY = "{call findMapMetadataDoorY(?)}";
 	/**
 	 * Gets the height of the map
 	 * @param idLevel 
@@ -46,13 +50,6 @@ public abstract class MetadataDAO extends AbstractDAO {
 		}
 		return height;
 	}
-
-	/**
-	 * Gets the width of the map
-	 * @param idLevel
-	 * @return the width of the map
-	 * @throws SQLException the SQL exception
-	 */
 	
 	public static int getMapMetadataWidth(final int idLevel) throws SQLException {
 		final java.sql.CallableStatement callStatement = prepareCall(sqlMapMetadataWidth);
@@ -70,12 +67,6 @@ public abstract class MetadataDAO extends AbstractDAO {
 		return width;
 	}
 
-	/**
-	 * Gets the diamonds needed on the map
-	 * @param idLevel
-	 * @return the diamonds needed to finished the level
-	 * @throws SQLException the SQL exception
-	 */
 	public static int getMapMetadataScoreNeed(final int idLevel) throws SQLException {
 		final java.sql.CallableStatement callStatement = prepareCall(sqlMapMetadataDiamondsNeeded);
 		int diamondsNeeded = 0;
@@ -98,5 +89,41 @@ public abstract class MetadataDAO extends AbstractDAO {
 	 * @return  the door X coordinate
 	 * @throws SQLException the SQL exception
 	 */
-	
+	public static int getMapMetadataDoorX(final int idLevel) throws SQLException {
+		final java.sql.CallableStatement callStatement = prepareCall(sqlMapMetadataDoorX);
+		int doorX = 0;
+		callStatement.setInt(1, idLevel);
+		if (callStatement.execute()){
+			final ResultSet result = callStatement.getResultSet();
+			if(result.next()){
+				if (result.first()){
+					doorX = result.getInt(1);
+				}
+			}
+			result.close();
+		}
+		return doorX;
+	}
+
+	/**
+	 * Gets the door Y coordinate of the map
+	 * @param idLevel
+	 * @return the the door Y
+	 * @throws SQLException the SQL exception
+	 */
+	public static int getMapMetadataDoorY(final int idLevel) throws SQLException {
+		final java.sql.CallableStatement callStatement = prepareCall(sqlMapMetadataDoorY);
+		int doorY = 0;
+		callStatement.setInt(1, idLevel);
+		if (callStatement.execute()){
+			final ResultSet result = callStatement.getResultSet();
+			if (result.next()){
+				if (result.first()){
+					doorY = result.getInt(1);
+				}
+			}
+			result.close();
+		}
+		return doorY;
+	}
 }

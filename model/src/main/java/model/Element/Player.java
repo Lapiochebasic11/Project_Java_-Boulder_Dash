@@ -1,59 +1,74 @@
-package  model.Element;
+package model.Element;
 
 import model.Map;
 
-public class Player extends ElementMobile {
-	
 
-	public static String sprite = "Player.jpg";
-	
-	Player(){
-		super(sprite);
-}
 
-	
-	public void dead(int x, int y,Map map) {
-		map.setOnTheMapXY(new Empty(), x, y);
+public class Player extends Living {
+
+	private static String SPRITE = "PLAYER.jpg";
+
+	public Player() {
+		super(SPRITE);
+
+	}
+
+
+	public void destruction(int x, int y,Map map) {
+		death(x, y,map);
+	}
+
+
+	public void death(int x, int y,Map map) {
 		map.setLose(true);
+	}
 	
-}
-	public void walk(int x, int y, Map map) {
-		dead(x,y,map);
+
+	
+	public void walkOver(int x, int y, char direction,Map map){
+		death(x, y, map);
 		
 	}
-	
+
+	public void move(int x, int y,int direction,Map map) {
+		
+		switch (direction){
+			case 38:
+				moveUp(x, y,map);
+				break;
+			case 40:
+				moveDown(x, y,map);
+				break;
+			case 39:
+				moveRight(x, y,map);
+				break;
+			case 37:
+				moveLeft(x, y,map);
+				break;
+		}
+		
+
+	}
+
 	public void moveUp(int x, int y,Map map) {
-		map.getOnTheMapXY(x, y-1).walk(x,y,'u',map);
+		map.getOnTheMapXY(x, y-1).walkOver(x,y,'u',map);
 
 	}
 
-	/**
-	 *
-	 * Launch the move to the down
-	 * @param position and map pointer
-	 */
 	public void moveDown(int x, int y,Map map) {
-		map.getOnTheMapXY(x, y+1).walk(x,y,'d',map);
+		map.getOnTheMapXY(x, y+1).walkOver(x,y,'d',map);
 
 	}
 
-	/**
-	 *
-	 * Launch the move to the left
-	 * @param position and map pointer
-	 */
+
 	public void moveLeft(int x, int y,Map map) {
-		map.getOnTheMapXY(x-1, y).walk(x,y,'l',map);
+		map.getOnTheMapXY(x-1, y).walkOver(x,y,'l',map);
 
 	}
 
-	/**
-	 *
-	 * Launch the move to the right
-	 * @param position and map pointer
-	 */
 	public void moveRight(int x, int y,Map map) {
-		map.getOnTheMapXY(x+1, y).walk(x,y,'r',map);
+		map.getOnTheMapXY(x+1, y).walkOver(x,y,'r',map);
 
 	}
+
 }

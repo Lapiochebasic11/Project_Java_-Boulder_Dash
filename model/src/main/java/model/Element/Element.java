@@ -1,29 +1,42 @@
-package  model.Element;
+package model.Element;
 
 import model.Map;
 
-public abstract class Element  {
+public abstract class Element implements IElement{
 
-	String sprite; 
+	String sprite;
+	int walk = 0;
 	
 	public Element(String sprite) {
 		this.sprite = sprite;
-	}
-
-	public void dead(int x, int y, Map map) {
-		
-	}
-	
-	public void walk(int x, int y,char direction, Map map) {
 
 	}
+
 	public String getSprite() {
-		return sprite;
-		
-	}
-	public void setSprite(String sprite) {
-		this.sprite = sprite;
+		return this.sprite;
 	}
 
 	
+	public void destruction(int x, int y, Map map) {
+
+	}
+
+	
+	public void walkOver(int x, int y, char direction, Map map) {
+
+	}
+
+	
+	public void move(int x, int y, int direction, Map map) {
+
+	}
+
+	public int isWalk() {
+		return walk;
+	}
+
+	public void setWalk(int walk) {
+		this.walk = walk;
+	}
+
 }

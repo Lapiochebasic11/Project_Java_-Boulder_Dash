@@ -2,24 +2,36 @@ package  model.Element;
 
 import model.Map;
 
-public class Ground extends Element {
-	
-	public static String sprite = "Ground.jpg";
-	
-	Ground(){
-		super(sprite);
-}
 
+public class Ground extends Element {
+
+	private static String SPRITE = "SOIL.jpg";
 	
-	public void walk(int x, int y, char direction, Map map) {
-		dead(x,y,map);
-		
-		
+	public Ground() 
+	{
+		super(SPRITE);
+	} 
+	
+	public void walkOver(int x, int y, char direction,Map map) {
+		switch (direction){
+		case 'u':
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x,y-1);
+			break;
+		case 'd':
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x,y+1);
+			break;
+		case 'l':
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x-1,y);
+			break;
+		case 'r':
+			map.setOnTheMapXY(map.getOnTheMapXY(x, y),x+1,y);
+			break;
+		}
+			map.setOnTheMapXY(new Empty(), x, y);
 		
 	}
-	public void dead(int x, int y,Map map) {
+	
+	public void destruction(int x, int y,Map map) {
 		map.setOnTheMapXY(new Empty(), x, y);
-
+	}
 }
-}
-

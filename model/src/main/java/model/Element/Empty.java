@@ -2,10 +2,10 @@ package model.Element;
 
 public class Empty extends Element{
 
-	public static String sprite = "Empty.jpg";
+	public static String SPRITE = "VOID.jpg";
 	
 	Empty(){
-		super(sprite);
+		super(SPRITE);
 }
 
 }

@@ -4,12 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-/**
- * <h1>The Class ElementDAO.</h1>
- * 
- * @author Hugo Routy
- * @version 1.0
- */
 public abstract class ElementDAO extends AbstractDAO {
 	/**
 	 * Gets the elements of a row in map of lv1
@@ -56,12 +50,6 @@ public abstract class ElementDAO extends AbstractDAO {
 		return elementsList;
 	}
 	
-	/**
-	 * Gets the elements of a row in map of lv2
-	 * @param row needed
-	 * @return  the elements of a row 
-	 * @throws SQLException the SQL exception
-	 */
 	private static ArrayList<String> getMapElementLv2(int row) throws SQLException {
 		row += 1;
 		final ArrayList<String> elementsList = new ArrayList<String>(); 
@@ -79,12 +67,6 @@ public abstract class ElementDAO extends AbstractDAO {
 		return elementsList;
 	}
 
-	/**
-	 * Gets the elements of a row in map of lv3
-	 * @param row needed
-	 * @return  the elements of a row 
-	 * @throws SQLException the SQL exception
-	 */
 	private static ArrayList<String> getMapElementLv3(int row) throws SQLException {
 		row += 1;
 		final ArrayList<String> elementsList = new ArrayList<String>(); 
