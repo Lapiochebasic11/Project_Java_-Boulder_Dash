@@ -52,7 +52,7 @@ public class Map {
 		this.height = height;
 	}
 
-	public int getWidht() {
+	public int getWidth() {
 		return width;
 	}
 
@@ -104,10 +104,17 @@ public class Map {
 		this.win = win;
 	}
 	
+	public boolean getWin() {
+		return win;
+	}
+	
 	public void setLose(boolean lose) {
 		this.lose = lose;
 	}
-
+	
+	public boolean getLose() {
+		return lose;
+	}
 
 }
 

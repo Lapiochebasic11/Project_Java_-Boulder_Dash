@@ -54,5 +54,5 @@ public class ViewPanel extends JPanel
         Y = Y - 2;
         repaint();
     }
-	
+
 }	

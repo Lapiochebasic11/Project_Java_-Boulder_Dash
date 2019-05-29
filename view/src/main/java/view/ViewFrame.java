@@ -1,15 +1,18 @@
 package view;
 
+import view.ViewPanel;
+
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import view.ViewPanel;
+
 
 public class ViewFrame extends JFrame implements KeyListener
 {
+	private static int keyUser = 0;
 	private static final long serialVersionUID = 1L;
 	public ViewPanel draw;
 	public ViewFrame() 
@@ -23,7 +26,7 @@ public class ViewFrame extends JFrame implements KeyListener
         setFocusTraversalKeysEnabled(false);
 	}
 
-	public void Windows()
+	public void Windows(int width, int height)
 	{
 		ViewFrame frame = new ViewFrame();
 		
@@ -38,10 +41,12 @@ public class ViewFrame extends JFrame implements KeyListener
         
         ImageIcon img = new ImageIcon("../ressources/icon.png");
 		frame.setIconImage(img.getImage());
+		this.addKeyListener(new ViewFrame());
 	}
 
 	 	public void keyPressed(KeyEvent e) 
 	 	{
+	 		keyUser = e.getKeyCode();
 	 		 if(e.getKeyCode()== KeyEvent.VK_RIGHT)
 		            draw.moveRight();
 		        else if(e.getKeyCode()== KeyEvent.VK_LEFT)
@@ -55,11 +60,20 @@ public class ViewFrame extends JFrame implements KeyListener
 
 	    public void keyReleased(KeyEvent e) 
 	    {
-
+	    	keyUser = 0;
 	    }
 	    
 	    public void keyTyped(KeyEvent e) 
 	    {
-
+	    	
 	    }
+	    
+	    public static int getKeyUser() {  
+			return keyUser;
+		}
+
+		public void setKeyUser(int keyUser) {
+			this.keyUser = keyUser;
+		}
+		
 }
