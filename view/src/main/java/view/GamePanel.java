@@ -24,7 +24,6 @@ public class GamePanel<mainFrame> extends JPanel{
 	private JFrame mainFrame;
 
 	public GamePanel(Image image) { 
-		// TODO Auto-generated constructor stub
 		this.image = image;
 		mainFrame = View.getMainFrame();
 		//m.setVisible(true);

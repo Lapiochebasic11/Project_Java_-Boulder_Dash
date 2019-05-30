@@ -13,7 +13,7 @@ public class Controller{
 	private int num = 0;
 	
 	public void play() throws IOException {
-		view.show(model.getMap().getWidth() , model.getMap().getHeight() );
+		view.show(model.getMap().getWidth(), model.getMap().getHeight() );
 		while (model.getMap().getWin() == false){
 			
 			try {
@@ -36,7 +36,7 @@ public class Controller{
 					
 					if (model.getMap().getScoreNeeded() == model.getMap().getScore() ){
 						if (model.getMap().getOnTheMapXY( model.getMap().getExitX(),model.getMap().getExitY()).getSprite() =="PLAYER.jpg")  {
-							model.getMap().setWin(true );
+							model.getMap().setWin(true);
 						}
 						model.getMap().spawnExit();
 					}
