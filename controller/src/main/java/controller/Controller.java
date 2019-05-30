@@ -13,11 +13,11 @@ public class Controller{
 	private int num = 0;
 	
 	public void play() throws IOException {
-		view.show(model.getMap().getWidth(), model.getMap().getHeight() );
+		
 		while (model.getMap().getWin() == false){
-			
+			view.show(model.getMap().getWidth(), model.getMap().getHeight());
 			try {
-				Thread.sleep(150);
+				Thread.sleep(5);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

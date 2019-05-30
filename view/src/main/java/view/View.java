@@ -29,13 +29,13 @@ public class View extends JFrame{
 	public void show(int x , int y) throws IOException  
 	{	
 		mainFrame = new JFrame();
-		this.setTitle("");
-		this.setSize(x*16, y*16);
+		this.setTitle("BoulderDash-The Game");
+		this.setSize(x*34, y*34);
 		this.setLocationRelativeTo(null);
 		this.setResizable(true);    //block windows size
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setContentPane(new FontPanel(model, x ,y));
+		this.setContentPane(new FontPanel(model,x ,y));
 		        
         this.addKeyListener(new keyControler());
 		

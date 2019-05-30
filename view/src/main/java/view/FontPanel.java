@@ -57,7 +57,7 @@ public class FontPanel extends Container {
 			{
 				
 				String adress = "..\\ressources\\";
-				String spriteName =  model.getMap().getOnTheMapXY(i,j).getSprite();
+				String spriteName =  model.getMap().getOnTheMapXY(j,i).getSprite();
 				String jpg = "";
 				String adressSprite = adress + spriteName + jpg; 
 				System.out.println(adressSprite);
@@ -66,11 +66,8 @@ public class FontPanel extends Container {
 				JPanel displayPanel = new GamePanel(image); 
 				//displayPanel.drawImage(image, 0,0,this);
 				add (displayPanel);
-				repaint();
 			}
-			repaint();
 		}
-		repaint();
 	}
 	
 }
