@@ -7,44 +7,47 @@ import javax.swing.JPanel;
 
 import model.Model; 
 
-
-
-
-
-public class View extends JFrame{
+public class View extends JFrame
+{
 
 	private static final long serialVersionUID = 1L;
 	private Model model;
 
-	  private static JFrame mainFrame;
+	private static JFrame mainFrame;
 	
 	private GamePanel gamePanel;
 
 	
-	public View(Model model) {
+	public View(Model model) 
+	{
 		this.model = model;
 	}
-  
 
 	public void show(int x , int y) throws IOException  
 	{	
 		mainFrame = new JFrame();
-		this.setTitle("BoulderDash-The Game");
-		this.setSize(x*34, y*34);
+		this.setTitle("BoulderDash - The Game");
+		this.setSize(x*33, y*33);
 		this.setLocationRelativeTo(null);
-		this.setResizable(true);    //block windows size
+		this.setResizable(true); 
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setContentPane(new FontPanel(model,x ,y));
 		        
         this.addKeyListener(new keyControler());
-		
+
 		//System.out.println(x);
 		//System.out.println(y);
 	}
+	
+	public void refresh(Model model, int x, int y) throws IOException
+	{
+		this.setContentPane(new FontPanel(model,x ,y));
+		this.addKeyListener(new keyControler());
+		this.setVisible(true);
+		
+	}
 
-	
-	
 	/*public void showPanel (int width, int height, String sprite,int score)
 	{
 		GamePanel pan;
@@ -68,16 +71,15 @@ public class View extends JFrame{
 		return keyControler.getKeyUser(); 
 	}
 
+	public static JFrame getMainFrame() 
+	{
+		return mainFrame;
+	}
 
 
+	public void setMainFrame(JFrame mainFrame) 
+	{
+		this.mainFrame = mainFrame;
+	}
 
-
-public static JFrame getMainFrame() {
-	return mainFrame;
-}
-
-
-public void setMainFrame(JFrame mainFrame) {
-	this.mainFrame = mainFrame;
-}
 }

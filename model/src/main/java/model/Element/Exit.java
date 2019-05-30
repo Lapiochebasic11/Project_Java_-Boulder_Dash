@@ -2,17 +2,9 @@ package model.Element;
 
 import model.Map;
 
-/**
- * <h1>The Class MetadataDAO.</h1>
- * 
- * @author Vuillaume Gautier
- * @version 1.0
- */
-
-
 public class Exit extends Element {
 
-	private static String SPRITE = "DOOR.png";
+	private static String SPRITE = "DOOR.jpg";
 
 	public Exit() {
 		super(SPRITE);

@@ -7,7 +7,7 @@ public abstract class Living extends Element {
 		super(SPRITE);
 	}
 
-	public void death(int x, int y,model.Map map) {
+	public void death(int x, int y, model.Map map) {
 	}
 
 }

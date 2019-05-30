@@ -2,17 +2,9 @@ package  model.Element;
 
 import model.Map;
 
-/**
- * <h1>The Class MetadataDAO.</h1>
- * 
- * @author Vuillaume Gautier
- * @version 1.0
- */
-
-
 public class Enemy extends Living implements Moves {
 
-	private static String SPRITE = "ENEMY.png";
+	private static String SPRITE = "ENEMY.jpg";
 	private char direction = 'r';
 	
 
@@ -71,7 +63,7 @@ switch (direction){
 			for(j=0; j<3;j++)
 			{
 				map.getOnTheMapXY(x-1+j, y-1+i).destruction(x-1+j, y-1+i,map);
-				if (map.getOnTheMapXY(x-1+j, y-1+i).getSprite()=="VOID.png"){
+				if (map.getOnTheMapXY(x-1+j, y-1+i).getSprite()=="VOID.jpg"){
 					map.setOnTheMapXY(new Diamond(),x-1+j, y-1+i);
 					}
 				}
@@ -115,7 +107,7 @@ switch (direction){
 
 	public boolean freePlace(int x, int y, Map map){
 		//System.out.println(map.getOnTheMapXY(x, y).getSprite());
-		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.png" || map.getOnTheMapXY(x, y).getSprite()=="PLAYER.png"){
+		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.jpg" || map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg"){
 			return true;
 		}
 		else {

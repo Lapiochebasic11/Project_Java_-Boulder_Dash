@@ -20,6 +20,7 @@ public class Player extends Living {
 
 
 	public void death(int x, int y,Map map) {
+
 		map.setLose(true);
 	}
 	

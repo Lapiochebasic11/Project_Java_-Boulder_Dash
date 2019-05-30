@@ -46,21 +46,19 @@ public class FontPanel extends Container {
 	}
 	*/
 
-	FontPanel (Model model, int x , int y ) throws IOException 
+	FontPanel (Model model, int x , int y ) throws IOException
 	{
 		this.model= model;
-		System.out.println("FontPanel ");
+		//System.out.println("FontPanel");
 		setLayout(new GridLayout(x,y));
 		for (int i = 0; i<x ; i++)
 		{
 			for (int j = 0; j<y ; j++)
 			{
-				
 				String adress = "..\\ressources\\";
 				String spriteName =  model.getMap().getOnTheMapXY(j,i).getSprite();
-				String jpg = "";
-				String adressSprite = adress + spriteName + jpg; 
-				System.out.println(adressSprite);
+				String adressSprite = adress + spriteName; 
+				//System.out.println(adressSprite);
 				File OpenSprite = new File(adressSprite);
 				Image image = ImageIO.read(OpenSprite);
 				JPanel displayPanel = new GamePanel(image); 
@@ -69,5 +67,5 @@ public class FontPanel extends Container {
 			}
 		}
 	}
-	
+
 }

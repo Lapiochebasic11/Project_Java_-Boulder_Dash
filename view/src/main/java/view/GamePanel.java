@@ -18,16 +18,13 @@ public class GamePanel<mainFrame> extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private String spriteName ; 
 	private int score;  
-	//final Graphics2D graphics;
-//	private static final Image NULL = null;  
 	private Image image;
 	private JFrame mainFrame;
 
 	public GamePanel(Image image) { 
 		this.image = image;
 		mainFrame = View.getMainFrame();
-		//m.setVisible(true);
-		System.out.println("construteur gamepanel");
+		//System.out.println("construteur gamepanel");
 	}
 
 	public void paintComponentBefore(){
@@ -37,7 +34,7 @@ public class GamePanel<mainFrame> extends JPanel{
 
 	protected void paintComponent(Graphics g) {
 		
-		System.out.println("yo paint component");
+		//System.out.println("yo paint component");
 		
 		g.drawImage(image, 0, 0,  View.getMainFrame());
 		this.setVisible(true);

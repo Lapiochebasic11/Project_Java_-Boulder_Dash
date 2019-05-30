@@ -14,7 +14,7 @@ public abstract class Motion extends Element implements Moves {
 	}
 	
 	public boolean freePlace(int x, int y,Map map){
-		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.jpg" || (map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg"&& movement ) || (map.getOnTheMapXY(x, y).getSprite()=="ENEMY.jpg" && movement)){
+		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.jpg" || (map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg"&& movement) || (map.getOnTheMapXY(x, y).getSprite()=="ENEMY.jpg" && movement)){
 			return true;
 			
 		}
@@ -27,15 +27,14 @@ public abstract class Motion extends Element implements Moves {
 		//System.out.println(map.getOnTheMapXY(x, y+1).getSprite());
 		if (freePlace(x,y+1,map)){
 			moveDown(x,y,map);
-			
-			//System.out.println(movement);
+			movement = true;
+			System.out.println(movement);
 			
 		}
 		else{
 			movement = false;
 			
 		}
-		
 		
 		
 		if (freePlace(x-1, y,map) && freePlace(x-1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.jpg") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.jpg"))){

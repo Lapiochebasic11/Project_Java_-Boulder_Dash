@@ -3,21 +3,22 @@ package controller;
 import java.io.IOException;
 
 import model.* ;
+import view.FontPanel;
 import view.View; 
 
 public class Controller{
 
 	private Model model;
 	private View view;
-	public static int frameRate = 10;
+	public static int frameRate = 100;
 	private int num = 0;
 	
 	public void play() throws IOException {
-		
+		view.show(model.getMap().getWidth(), model.getMap().getHeight());
 		while (model.getMap().getWin() == false){
-			view.show(model.getMap().getWidth(), model.getMap().getHeight());
+			view.refresh(model, model.getMap().getWidth(), model.getMap().getHeight());
 			try {
-				Thread.sleep(5);
+				Thread.sleep(10);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -31,7 +32,7 @@ public class Controller{
 						num = 0;
 					}
 					else{
-						model.getMap().getOnTheMapXY(x, y).move(x, y , (int) (Math.random() * 4 ), model.getMap());
+						model.getMap().getOnTheMapXY(x, y).move(x, y , (int) (Math.random() * (0-3)), model.getMap());
 					}
 					
 					if (model.getMap().getScoreNeeded() == model.getMap().getScore() ){
@@ -56,7 +57,7 @@ public class Controller{
 					switch (model.getMap().getOnTheMapXY(x, y).getSprite())
 					{
 						case "ROCK.jpg":
-							System.out.print("O ");
+							System.out.print("O");
 							break;
 
 						case "BORDER.jpg":
@@ -130,5 +131,5 @@ public class Controller{
 	public void setView(View view) {
 		this.view = view;
 	}
-
+	
 }

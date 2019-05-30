@@ -20,28 +20,16 @@ public class Map implements IMap {
 	private boolean lose = false;
 	public int tableID = 2;
 
-	/**
-	 * Initialize all variables from the Database and launch the fill of the map
-	 * 
-	 * @throws SQLException 
-	 */
-	public Map() throws SQLException {
+	public Map() throws SQLException 
+	{
 		setWidth(MetadataDAO.getMapMetadataWidth(tableID));
 		setHeight(MetadataDAO.getMapMetadataHeight(tableID));
 		setExitX(MetadataDAO.getMapMetadataDoorX(tableID));
 		setExitY(MetadataDAO.getMapMetadataDoorY(tableID));
 		setScoreNeeded(MetadataDAO.getMapMetadataScoreNeed(tableID));
 		this.onTheMap = new model.Element.Element[width][height];
-		fillOnTheMap();
-		
+		fillOnTheMap();		
 	}
-
-	
-	/**
-	 * Fill the map of element, using the factory to transform Database strings into Element
-	 * 
-	 * @throws SQLException 
-	 */
 	
 	public void fillOnTheMap() throws SQLException {
 		int x,y;
@@ -53,29 +41,17 @@ public class Map implements IMap {
 		}
 	}
 	
-	/**
-	 *Spawn the door when the controller wants it
-	 */
 	
 	public void spawnExit() {
 		setOnTheMapXY(ElementFactory.getObject("DOOR"), exitX, exitY);
 
 	}
 	
-	/**
-	 * Give the element located on x,y
-	 * @param position
-	 * @return Element on x,y
-	 */
 	public model.Element.Element getOnTheMapXY(int x, int y) {
 
 		return onTheMap[x][y];
 	}
 
-	/**
-	 * Put an element on x,y
-	 * @param positon and element
-	 */
 	public void setOnTheMapXY(model.Element.Element element, int x, int y) {
 		this.onTheMap[x][y] = element;
 	}
