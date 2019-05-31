@@ -27,7 +27,8 @@ public class Player extends Living {
 
 	
 	public void walkOver(int x, int y, char direction,Map map){
-		death(x, y, map);
+	
+		death(x,y, map);
 		
 	}
 
