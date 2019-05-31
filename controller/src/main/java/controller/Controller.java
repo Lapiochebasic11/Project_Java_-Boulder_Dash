@@ -5,19 +5,25 @@ import java.io.IOException;
 import model.* ;
 import view.View; 
 
-public class Controller{
-
+public class Controller
+{
 	private Model model;
 	private View view;
 	private int num = 0;
 	
-	public void play() throws IOException {
+	public void play() throws IOException 
+	{
 		view.show(model.getMap().getWidth(), model.getMap().getHeight());
-		while (model.getMap().getWin() == false){
+		while (model.getMap().getWin() == false && model.getMap().getLose() == false)
+		{
 			view.refresh(model, model.getMap().getWidth(), model.getMap().getHeight());
-			try {
+			try 
+			{
 				Thread.sleep(10);
-			} catch (InterruptedException e) {
+			} 
+			
+			catch (InterruptedException e) 
+			{
 				e.printStackTrace();
 			}
 			num = view.KeyUser();
@@ -43,14 +49,21 @@ public class Controller{
 				
 			}
 			
-			for(int y = 0 ; y < model.getMap().getHeight() ; y++){
-				for(int x = 0; x < model.getMap().getWidth()  ; x++){
+			for(int y = 0 ; y < model.getMap().getHeight() ; y++)
+			{
+				
+				for(int x = 0; x < model.getMap().getWidth()  ; x++)
+				{
 				  model.getMap().getOnTheMapXY(x, y).setWalk(0); 
-				}	
+				}
+				
 			}
 			
-			for(int y = 0 ; y < model.getMap().getHeight() ; y++){
-				for(int x = 0; x < model.getMap().getWidth()  ; x++){
+			for(int y = 0 ; y < model.getMap().getHeight() ; y++)
+			{
+				
+				for(int x = 0; x < model.getMap().getWidth()  ; x++)
+				{
 					
 					switch (model.getMap().getOnTheMapXY(x, y).getSprite())
 					{
@@ -93,32 +106,43 @@ public class Controller{
 			System.out.println("");
 			
 		}
-		if (model.getMap().getLose() == false ){
+		
+		if (model.getMap().getLose() == false )
+		{
 			System.out.println("Success");
+			view.GameWin();
 		}
-		else{
+		
+		else
+		{
 			System.out.println("Loose");
+			view.GameOver();
 		}
 	}
 
-	public Model getModel() {
+	public Model getModel() 
+	{
 		return this.model;
 	}
 
-	public View getView() {
+	public View getView() 
+	{
 		return this.view;
 	}
 
-	public Controller(View view, Model model) {
+	public Controller(View view, Model model) 
+	{
 		this.view = view;
 		this.model = model;
 	}
 
-	public void setModel(Model model) {
+	public void setModel(Model model) 
+	{
 		this.model = model;
 	}
 
-	public void setView(View view) {
+	public void setView(View view) 
+	{
 		this.view = view;
 	}
 	

@@ -2,8 +2,6 @@ package model.Element;
 
 import model.Map;
 
-
-
 public class Player extends Living {
 
 	private static String SPRITE = "PLAYER.jpg";

@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import model.Model; 
 
@@ -15,9 +14,6 @@ public class View extends JFrame
 	private Model model;
 
 	private static JFrame mainFrame;
-	
-	private GamePanel gamePanel;
-
 	
 	public View(Model model) 
 	{
@@ -38,10 +34,6 @@ public class View extends JFrame
         
         ImageIcon img = new ImageIcon("../ressources/icon.png");
         this.setIconImage(img.getImage());
-        
-
-		//System.out.println(x);
-		//System.out.println(y);
 	}
 	
 	public void refresh(Model model, int x, int y) throws IOException
@@ -50,24 +42,6 @@ public class View extends JFrame
 		this.addKeyListener(new keyControler());
 		this.setVisible(true);
 	}
-
-	/*public void showPanel (int width, int height, String sprite,int score)
-	{
-		GamePanel pan;
-		try {
-			pan = new GamePanel(sprite, width, height,  score );
-			pan.paintComponentBefore();
-			
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		}
-		
-		//System.out.println(sprite);
-	}
-	*/
 
 	public int KeyUser()
 	{
@@ -82,7 +56,16 @@ public class View extends JFrame
 
 	public void setMainFrame(JFrame mainFrame) 
 	{
-		this.mainFrame = mainFrame;
+		View.mainFrame = mainFrame;
+	}
+	
+	public void GameOver()
+	{
+		GameOver.GameOvers();
 	}
 
+	public void GameWin()
+	{
+		GameWin.GameWins();
+	}
 }
