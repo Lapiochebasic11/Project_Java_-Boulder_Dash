@@ -2,6 +2,7 @@ package view;
 
 import java.io.IOException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -32,9 +33,12 @@ public class View extends JFrame
 		this.setResizable(true); 
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setContentPane(new FontPanel(model,x ,y));
-		        
+		this.setContentPane(new FontPanel(model,x ,y));       
         this.addKeyListener(new keyControler());
+        
+        ImageIcon img = new ImageIcon("../ressources/icon.png");
+        this.setIconImage(img.getImage());
+        
 
 		//System.out.println(x);
 		//System.out.println(y);
@@ -45,7 +49,6 @@ public class View extends JFrame
 		this.setContentPane(new FontPanel(model,x ,y));
 		this.addKeyListener(new keyControler());
 		this.setVisible(true);
-		
 	}
 
 	/*public void showPanel (int width, int height, String sprite,int score)

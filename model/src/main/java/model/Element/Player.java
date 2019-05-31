@@ -19,8 +19,8 @@ public class Player extends Living {
 	}
 
 
-	public void death(int x, int y,Map map) {
-
+	public void death(int x, int y,Map map) 
+	{
 		map.setLose(true);
 	}
 	
@@ -31,9 +31,10 @@ public class Player extends Living {
 		
 	}
 
-	public void move(int x, int y,int direction,Map map) {
-		
-		switch (direction){
+	public void move(int x, int y,int direction,Map map) 
+	{		
+		switch (direction)
+		{
 			case 38:
 				moveUp(x, y,map);
 				break;
@@ -47,8 +48,6 @@ public class Player extends Living {
 				moveLeft(x, y,map);
 				break;
 		}
-		
-
 	}
 
 	public void moveUp(int x, int y,Map map) {

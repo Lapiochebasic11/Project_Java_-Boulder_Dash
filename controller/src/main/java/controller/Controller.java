@@ -3,14 +3,12 @@ package controller;
 import java.io.IOException;
 
 import model.* ;
-import view.FontPanel;
 import view.View; 
 
 public class Controller{
 
 	private Model model;
 	private View view;
-	public static int frameRate = 100;
 	private int num = 0;
 	
 	public void play() throws IOException {
@@ -57,7 +55,7 @@ public class Controller{
 					switch (model.getMap().getOnTheMapXY(x, y).getSprite())
 					{
 						case "ROCK.jpg":
-							System.out.print("O");
+							System.out.print("O ");
 							break;
 
 						case "BORDER.jpg":
@@ -66,10 +64,6 @@ public class Controller{
 						
 						case "DIAMOND.jpg":
 							System.out.print("V ");
-							break;
-						
-						case "DESTRUCTIBLEWALL.jpg":
-							System.out.print("[]");
 							break;
 						
 						case "DOOR.jpg":
@@ -86,10 +80,6 @@ public class Controller{
 
 						case "ENEMY.jpg":
 							System.out.print("X ");
-							break;
-
-						case "ENEMY2.jpg":
-							System.out.print("");
 							break;
 
 						case "VOID.jpg":

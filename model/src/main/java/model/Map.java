@@ -86,7 +86,7 @@ public class Map implements IMap {
 	}
 
 	public void setLose(boolean lose) {
-			this.lose = lose;
+		this.lose = lose;
 	}
 
 
