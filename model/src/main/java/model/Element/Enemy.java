@@ -4,9 +4,7 @@ import model.Map;
 
 public class Enemy extends Living implements Moves {
 
-	private static String SPRITE = "ENEMY.jpg";
-	private char direction = 'r';
-	
+	private static String SPRITE = "ENEMY.jpg";	
 
 	public Enemy() {
 		super(SPRITE);

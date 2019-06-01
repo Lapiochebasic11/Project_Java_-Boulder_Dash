@@ -4,7 +4,6 @@ public class Player extends Element {
 	
 	private int x;
 	private int y;
-	private boolean alive = true;
 	private static String sprite = "PLAYER.jpg";
 	
 	
