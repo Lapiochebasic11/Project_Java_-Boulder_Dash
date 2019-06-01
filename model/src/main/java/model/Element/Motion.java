@@ -6,12 +6,13 @@ import model.Map;
 
 public abstract class Motion extends Element implements Moves {
 
-	boolean movement = false;
-	
+		boolean movement = false;
 	public Motion(String sprite ) {
 		super(sprite);
+	
 
 	}
+	
 	
 	public boolean freePlace(int x, int y,Map map){
 		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.jpg" || (map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg" && movement) || (map.getOnTheMapXY(x, y).getSprite()=="ENEMY.jpg" && movement)){
@@ -23,29 +24,42 @@ public abstract class Motion extends Element implements Moves {
 		}
 	}
 	
+<<<<<<< HEAD
 	public void move(int x, int y, int direction,Map map) 
 	{
 		
 		if (freePlace(x,y+1,map))
 		{
+=======
+	public void move(int x, int y, int direction,Map map) {
+
+		if (freePlace(x,y+1,map)){
+>>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
 			moveDown(x,y,map);
+<<<<<<< HEAD
 			movement = true;	
 		}
 		
 		else
 		{
 			movement = false;	
+=======
+			}
+		
+		else {
+>>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
 		}
 		
 		
-		if (freePlace(x-1, y,map) && freePlace(x-1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.jpg") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.jpg"))){
+		 if (freePlace(x-1, y,map) && freePlace(x-1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.jpg") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.jpg"))){
 			moveLeft(x,y,map);
 		}
 		
-		if (freePlace(x+1, y,map) && freePlace(x+1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.jpg") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.jpg"))){
+		 if (freePlace(x+1, y,map) && freePlace(x+1, y+1,map) && ((map.getOnTheMapXY(x, y+1).getSprite()=="ROCK.jpg") || (map.getOnTheMapXY(x, y+1).getSprite()=="DIAMOND.jpg"))){
 			moveRight(x,y,map);
 
 		}
+
 		
 	}
 	
@@ -65,7 +79,13 @@ public abstract class Motion extends Element implements Moves {
 	 * @param position and map pointer
 	 */
 	public void moveDown(int x, int y,Map map){
-		map.getOnTheMapXY(x, y+1).walkOver(x, y, 'd',map);
+		if (map.getOnTheMapXY(x, y).getSprite()=="ROCK.jpg")
+		{
+		map.setOnTheMapXY(new RockFall(), x, y);
+		}
+		else {
+			map.setOnTheMapXY(new DiamondFall(), x, y);
+		}
 	}
 
 	/**
@@ -74,7 +94,13 @@ public abstract class Motion extends Element implements Moves {
 	 * @param position and map pointer
 	 */
 	public void moveLeft(int x, int y,Map map){
-		map.getOnTheMapXY(x+1, y).walkOver(x, y, 'l',map);
+		if (map.getOnTheMapXY(x, y).getSprite()=="ROCK.jpg")
+		{
+		map.setOnTheMapXY(new RockFall(), x, y);
+		}
+		else {
+			map.setOnTheMapXY(new DiamondFall(), x, y);
+		}
 	}
 
 	/**
@@ -83,7 +109,13 @@ public abstract class Motion extends Element implements Moves {
 	 * @param position and map pointer
 	 */
 	public void moveRight(int x, int y,Map map){
-		map.getOnTheMapXY(x-1, y).walkOver(x, y, 'r',map);
+		if (map.getOnTheMapXY(x, y).getSprite()=="ROCK.jpg")
+		{
+		map.setOnTheMapXY(new RockFall(), x, y);
+		}
+		else {
+			map.setOnTheMapXY(new DiamondFall(), x, y);
+		}
 	}
 	
 	

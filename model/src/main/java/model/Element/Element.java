@@ -6,6 +6,7 @@ public abstract class Element implements IElement{
 
 	String sprite;
 	int walk = 0;
+
 	
 	public Element(String sprite) {
 		this.sprite = sprite;

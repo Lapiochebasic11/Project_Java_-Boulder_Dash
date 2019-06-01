@@ -10,8 +10,10 @@ public abstract class ElementFactory {
 	public static Player Player = new Player();
 	public static Wall Wall = new Wall();
 	public static Diamond Diamond = new Diamond();
+	public static RockFall Rockfall = new RockFall();
+	public static DiamondFall Diamondfall = new DiamondFall();
 	
-	private static Element[] element = {Rock,Diamond,Enemy,Player,Empty,Ground,Exit,Wall};
+	private static Element[] element = {Rock,Diamond,Enemy,Player,Empty,Ground,Exit,Wall,Rockfall,Diamondfall};
 	
 	public static Element getObject(String object) {
 		

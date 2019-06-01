@@ -33,5 +33,7 @@ public class Rock extends Motion implements Moves {
 			
 		}
 	}
+
+	
 	
 }
