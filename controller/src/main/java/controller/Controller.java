@@ -19,7 +19,7 @@ public class Controller
 			view.refresh(model, model.getMap().getWidth(), model.getMap().getHeight());
 			try 
 			{
-				Thread.sleep(10);
+				Thread.sleep(45);
 			} 
 			
 			catch (InterruptedException e) 
@@ -36,7 +36,7 @@ public class Controller
 						num = 0;
 					}
 					else{
-						model.getMap().getOnTheMapXY(x, y).move(x, y , (int) (Math.random() * (0-3)), model.getMap());
+						model.getMap().getOnTheMapXY(x, y).move(x, y ,(int) (Math.random() * (0-3)), model.getMap());
 					}
 					
 					if (model.getMap().getScoreNeeded() == model.getMap().getScore() ){

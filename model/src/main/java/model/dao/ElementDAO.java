@@ -46,7 +46,6 @@ public abstract class ElementDAO extends AbstractDAO {
 			}
 			result.close();
 		}
-		//System.out.println(elementsList);
 		return elementsList;
 	}
 	

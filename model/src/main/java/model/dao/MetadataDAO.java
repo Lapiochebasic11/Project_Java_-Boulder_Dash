@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  * <h1>The Class MetadataDAO.</h1>
  * 
- * @author Hugo Routy
+ * @author Emanuel Caracciolo
  * @version 1.0
  */
 public abstract class MetadataDAO extends AbstractDAO {

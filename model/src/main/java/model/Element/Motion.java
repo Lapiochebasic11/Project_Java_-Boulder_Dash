@@ -23,17 +23,18 @@ public abstract class Motion extends Element implements Moves {
 		}
 	}
 	
-	public void move(int x, int y, int direction,Map map) {
-		//System.out.println(map.getOnTheMapXY(x, y+1).getSprite());
-		if (freePlace(x,y+1,map)){
+	public void move(int x, int y, int direction,Map map) 
+	{
+		
+		if (freePlace(x,y+1,map))
+		{
 			moveDown(x,y,map);
-			movement = true;
-			//System.out.println(movement);
-			
+			movement = true;	
 		}
-		else{
-			movement = false;
-			
+		
+		else
+		{
+			movement = false;	
 		}
 		
 		

@@ -15,7 +15,6 @@ public class keyControler implements KeyListener
     public void TitreKeyListener(JLabel label_) 
     {
         label = label_;
-        System.out.println("key listener");
     }
  
     public void keyPressed(KeyEvent e) 
@@ -32,7 +31,6 @@ public class keyControler implements KeyListener
     {
     	
     }
- 
     
 	public static int getKeyUser() 
 	{  
