@@ -2,6 +2,11 @@ package model.Element;
 
 import model.Map;
 
+/**
+ * 
+ * @author Lilian Schneider
+ *
+ */
 public class Exit extends Element {
 
 	private static String SPRITE = "DOOR.jpg";

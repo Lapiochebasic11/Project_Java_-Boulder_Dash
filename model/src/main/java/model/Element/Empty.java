@@ -2,6 +2,11 @@ package model.Element;
 
 import model.Map;
 
+/**
+ * 
+ * @author Lilian Schneider
+ *
+ */
 public class Empty extends Element{
 
     public static String SPRITE = "VOID.jpg";
@@ -10,6 +15,13 @@ public class Empty extends Element{
         super(SPRITE);
 }
 
+    /**
+     * able to walk on the empty box 
+     * @param position x
+     * @param position y
+     * @param direction
+     * @param map
+     */
     public void walkOver(int x, int y, char direction,Map map) 
     {
         switch (direction)
@@ -30,12 +42,5 @@ public class Empty extends Element{
             map.setOnTheMapXY(new Empty(), x, y);
 
     }
-    /**
-     * Put a Void when a ground element is destroyed
-     * @param position and map pointer
-     *
-     */
-    public void destruction(int x, int y,Map map) {
-        map.setOnTheMapXY(new Empty(), x, y);
-    }
+    
 }
