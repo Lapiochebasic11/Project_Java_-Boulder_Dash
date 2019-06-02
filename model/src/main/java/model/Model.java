@@ -31,8 +31,13 @@ public class Model {
 		SoundBox.playerdie();
 	}
 	
-	public void gametheme()
+	public void gamethemestart()
 	{
-		SoundBox.theme();
+		SoundBox.themestart();
+	}
+	
+	public void gamethemestop()
+	{
+		SoundBox.themestop();
 	}
 }

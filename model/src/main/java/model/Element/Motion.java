@@ -23,7 +23,7 @@ public abstract class Motion extends Element implements Moves {
 			return false;
 		}
 	}
-	
+
 	public void move(int x, int y, int direction,Map map) {
 
 		if (freePlace(x,y+1,map)){

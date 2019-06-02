@@ -6,26 +6,46 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-
+/**
+ * @author Emanuel Caracciolo
+ * @version 1.0
+ * 
+ * @param <mainFrame>
+ */
 
 public class GamePanel<mainFrame> extends JPanel
 {
 	private static final long serialVersionUID = 1L;  
 	private Image image;
+	
 	@SuppressWarnings("unused")
 	private JFrame mainFrame;
 
+/**
+* 
+* 
+* @param image
+*/
 	public GamePanel(Image image) 
 	{ 
 		this.image = image;
 		mainFrame = View.getMainFrame();
 	}
 
+/**
+ * 	
+ * 
+ */
 	public void paintComponentBefore()
 	{
 		paintComponent(this.getGraphics());
 	}
 
+/**
+ * 
+ * 
+ * @param g
+ */
 	protected void paintComponent(Graphics g) 
 	{
 		g.drawImage(image, 0, 0,  View.getMainFrame());

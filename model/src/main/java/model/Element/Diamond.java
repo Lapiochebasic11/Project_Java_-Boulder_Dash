@@ -15,12 +15,14 @@ public class Diamond extends Motion implements Moves{
 
 	public void walkOver(int x, int y, char direction, Map map) 
 	{
+		if(map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg") 
+		{
 		map.setScore(map.getScore() + 1);
 		map.setOnTheMapXY(new Empty(), x, y);
 		SoundBox.diamondget();
 		
 		switch (direction)
-		{
+			{
 			case 'u':
 				map.setOnTheMapXY(new Player(), x, y-1);
 				break;
@@ -34,6 +36,7 @@ public class Diamond extends Motion implements Moves{
 				map.setOnTheMapXY(new Player(), x+1, y);
 				break;
 			
+			}
 		}
 		
 	}

@@ -1,13 +1,10 @@
 package model;
 
-
-
-public interface IMap {
-
+public interface IMap 
+{
 	int getWidth();
 
 	int getHeight();
 
 	void spawnExit();
-
 }

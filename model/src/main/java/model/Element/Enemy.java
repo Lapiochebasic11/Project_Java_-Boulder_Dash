@@ -61,9 +61,11 @@ switch (direction){
 			for(j=0; j<3;j++)
 			{
 				map.getOnTheMapXY(x-1+j, y-1+i).destruction(x-1+j, y-1+i,map);
-				if (map.getOnTheMapXY(x-1+j, y-1+i).getSprite()=="VOID.jpg" || map.getOnTheMapXY(x-1+j, y-1+i).getSprite()=="ROCKFALL.jpg" ){
+				if (map.getOnTheMapXY(x-1+j, y-1+i).getSprite()=="VOID.jpg" || map.getOnTheMapXY(x-1+j, y-1+i).getSprite()=="ROCKFALL.jpg" )
+				{
 					map.setOnTheMapXY(new Diamond(),x-1+j, y-1+i);
-					}
+					SoundBox.enemydie();
+				}
 				}
 			} 
 		}

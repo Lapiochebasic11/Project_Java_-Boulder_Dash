@@ -6,10 +6,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * @author vilas
+ * @version 1.0
+ */
 public class GameWin extends JPanel
 {
 	private static final long serialVersionUID = 1L;
-
+	
+/**
+* Create a new window painted in green with "you Win !" written
+* 
+*/
 	public static void GameWins()
 	{		
 		JLabel label= new JLabel("You Win !");	
