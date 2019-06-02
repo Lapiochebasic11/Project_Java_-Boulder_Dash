@@ -15,9 +15,9 @@ public class GameWin extends JPanel
 	private static final long serialVersionUID = 1L;
 	
 /**
-* Create a new window painted in green with "you Win !" written
-* 
-*/
+ * Create a new window painted in green with "you Win !" written
+ * 
+ */
 	public static void GameWins()
 	{		
 		JLabel label= new JLabel("You Win !");	

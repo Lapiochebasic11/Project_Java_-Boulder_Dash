@@ -22,18 +22,17 @@ public class GamePanel<mainFrame> extends JPanel
 	private JFrame mainFrame;
 
 /**
-* 
-* 
-* @param image
-*/
+ * Appoint image object
+ * 
+ * @param image
+ */
 	public GamePanel(Image image) 
 	{ 
 		this.image = image;
-		mainFrame = View.getMainFrame();
 	}
 
 /**
- * 	
+ * 	Draw the component
  * 
  */
 	public void paintComponentBefore()
@@ -42,7 +41,7 @@ public class GamePanel<mainFrame> extends JPanel
 	}
 
 /**
- * 
+ * Draw the component and make it visible
  * 
  * @param g
  */

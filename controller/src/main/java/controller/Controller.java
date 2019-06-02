@@ -5,12 +5,21 @@ import java.io.IOException;
 import model.* ;
 import view.View; 
 
+/**
+ * @author Pierre-Olivier Schaller
+ * @version 1.0
+ */
 public class Controller
 {
 	private Model model;
 	private View view;
 	private int num = 0;
 	
+/**
+ * The game is being played, it prints the game in the console and detect if the player win or lose
+ * 
+ * @throws IOException
+ */
 	public void play() throws IOException 
 	{
 		view.show(model.getMap().getWidth(), model.getMap().getHeight());
@@ -20,7 +29,7 @@ public class Controller
 			view.refresh(model, model.getMap().getWidth(), model.getMap().getHeight());
 			try 
 			{
-				Thread.sleep(5);
+				Thread.sleep(10);
 			} 
 			
 			catch (InterruptedException e) 
@@ -39,7 +48,7 @@ public class Controller
 					
 					else
 					{
-						model.getMap().getOnTheMapXY(x, y).move(x, y ,(int) (Math.random() * (0-10)), model.getMap());
+						model.getMap().getOnTheMapXY(x, y).move(x, y ,(int) (Math.random() * (0+10)), model.getMap());
 					}
 					
 					if (model.getMap().getScoreNeeded() == model.getMap().getScore() ){
@@ -99,7 +108,7 @@ public class Controller
 							break;
 
 						case "VOID.jpg":
-							System.out.print("_ ");
+							System.out.print("  ");
 							break;
 					}
 				}
@@ -127,27 +136,51 @@ public class Controller
 		}
 	}
 
+/**
+ * 
+ * @return model object
+ */
 	public Model getModel() 
 	{
 		return this.model;
 	}
 
+/**
+ * 
+ * @return view object
+ */
 	public View getView() 
 	{
 		return this.view;
 	}
 
+/**
+ * Appoint model and view objects
+ * 
+ * @param view
+ * @param model
+ */
 	public Controller(View view, Model model) 
 	{
 		this.view = view;
 		this.model = model;
 	}
 
+/**
+ * Appoint model object
+ * 
+ * @param model
+ */
 	public void setModel(Model model) 
 	{
 		this.model = model;
 	}
 
+/**
+ * Appoint view object
+ * 
+ * @param view
+ */
 	public void setView(View view) 
 	{
 		this.view = view;
