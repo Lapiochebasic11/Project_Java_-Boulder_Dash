@@ -14,12 +14,13 @@ public class Controller
 	public void play() throws IOException 
 	{
 		view.show(model.getMap().getWidth(), model.getMap().getHeight());
+		model.gamethemestart();
 		while (model.getMap().getWin() == false && model.getMap().getLose() == false)
 		{
 			view.refresh(model, model.getMap().getWidth(), model.getMap().getHeight());
 			try 
 			{
-				Thread.sleep(45);
+				Thread.sleep(5);
 			} 
 			
 			catch (InterruptedException e) 
@@ -35,8 +36,10 @@ public class Controller
 						model.getMap().getOnTheMapXY(x, y).move(x, y , num , model.getMap());
 						num = 0;
 					}
-					else{
-						model.getMap().getOnTheMapXY(x, y).move(x, y ,(int) (Math.random() * (0-3)), model.getMap());
+					
+					else
+					{
+						model.getMap().getOnTheMapXY(x, y).move(x, y ,(int) (Math.random() * (0-10)), model.getMap());
 					}
 					
 					if (model.getMap().getScoreNeeded() == model.getMap().getScore() ){
@@ -112,13 +115,15 @@ public class Controller
 			System.out.println("Success");
 			view.GameWin();
 			model.winsound();
+			model.gamethemestop();
 		}
 		
 		else
 		{
-			System.out.println("Loose");
+			System.out.println("Lose");
 			view.GameOver();
 			model.losesound();
+			model.gamethemestop();
 		}
 	}
 

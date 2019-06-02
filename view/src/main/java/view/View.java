@@ -7,6 +7,10 @@ import javax.swing.JFrame;
 
 import model.Model; 
 
+/** 
+ * @author Pierre-Olivier
+ * @version 1.0
+ */
 public class View extends JFrame
 {
 
@@ -14,7 +18,12 @@ public class View extends JFrame
 	private Model model;
 
 	private static JFrame mainFrame;
-	
+
+/**
+ * 
+ * 
+ * @param model
+ */
 	public View(Model model) 
 	{
 		this.model = model;

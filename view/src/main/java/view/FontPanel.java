@@ -11,19 +11,27 @@ import javax.swing.JPanel;
 
 import model.Model;
 
-public class FontPanel extends Container {
-	
+/**
+ * @author Emanuel Caracciolo
+ * @version 1.0
+ */
 
-	
-	/*public FontPanel(BoulderDashModel model) {
-		super();
-		this.model = model;
-	}*/
-
+public class FontPanel extends Container 
+{
 	private static final long serialVersionUID = 1L;
+
 	@SuppressWarnings("unused")
 	private Model model;
 
+/**
+ * Load the map with the element on the screen
+ * 
+ * @param model
+ * @param x
+ * @param y
+ * @throws IOException
+ */
+	
 	FontPanel (Model model, int x , int y ) throws IOException
 	{
 		this.model= model;
@@ -34,7 +42,7 @@ public class FontPanel extends Container {
 			{
 				String adress = "..\\ressources\\";
 				String spriteName =  model.getMap().getOnTheMapXY(j,i).getSprite();
-				String adressSprite = adress + spriteName; 
+				String adressSprite = adress + spriteName;
 				File OpenSprite = new File(adressSprite);
 				Image image = ImageIO.read(OpenSprite);
 				JPanel displayPanel = new GamePanel<Object>(image); 
