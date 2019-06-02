@@ -20,7 +20,7 @@ public class View extends JFrame
 	private static JFrame mainFrame;
 
 /**
- * 
+ * Appoints model object
  * 
  * @param model
  */
@@ -29,6 +29,13 @@ public class View extends JFrame
 		this.model = model;
 	}
 
+/**
+ * Creates a window in wich the game is display
+ * 
+ * @param x
+ * @param y
+ * @throws IOException
+ */
 	public void show(int x , int y) throws IOException  
 	{	
 		mainFrame = new JFrame();
@@ -44,34 +51,62 @@ public class View extends JFrame
         ImageIcon img = new ImageIcon("../ressources/icon.png");
         this.setIconImage(img.getImage());
 	}
-	
+
+/**
+ * Allows visibility and sets the contentPane property
+ * 
+ * @param model
+ * @param x
+ * @param y
+ * @throws IOException
+ */
 	public void refresh(Model model, int x, int y) throws IOException
 	{
 		this.setContentPane(new FontPanel(model,x ,y));
 		this.setVisible(true);
 	}
 
+/**
+ * 
+ * @return if wether or not a key is pressed
+ */
 	public int KeyUser()
 	{
 		return keyControler.getKeyUser(); 
 	}
-
+	
+/**
+ * 
+ * @return the frame 
+ */
 	public static JFrame getMainFrame() 
 	{
 		return mainFrame;
 	}
 
-
+/**
+ * Appoints mainframe object
+ * 
+ * @param mainFrame
+ */
 	public void setMainFrame(JFrame mainFrame) 
 	{
 		View.mainFrame = mainFrame;
 	}
 	
+/**
+ * Calls GameOvers method
+ * 
+ */
 	public void GameOver()
 	{
 		GameOver.GameOvers();
 	}
 
+/**
+ * Calls GameWins method
+ * 
+ */
 	public void GameWin()
 	{
 		GameWin.GameWins();

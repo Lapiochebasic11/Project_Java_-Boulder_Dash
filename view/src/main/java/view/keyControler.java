@@ -12,10 +12,10 @@ public class keyControler implements KeyListener
 	private static int keyUser = 0;
 
 /**
-* Invoked when a key has been pressed
-* 
-* @param e
-*/
+ * Invoked when a key has been pressed
+ * 
+ * @param e
+ */
 
     public void keyPressed(KeyEvent e) 
     { 
@@ -23,29 +23,29 @@ public class keyControler implements KeyListener
     }   
  
 /**
-* Invoked when a key has been released
-* 
-* @param e
-*/
+ * Invoked when a key has been released
+ * 
+ * @param e
+ */
     public void keyReleased(KeyEvent e) 
     {
     	keyUser = 0;
     }   
  
 /**
-* Invoked when a key has been typed
-* 
-* @param e
-*/
+ * Invoked when a key has been typed
+ * 
+ * @param e
+ */
     public void keyTyped(KeyEvent e) 
     {
     	
     }
    
 /**
-*
-* @return wether or not if a key is pressed
-*/
+ *
+ * @return wether or not if a key is pressed
+ */
 	public static int getKeyUser() 
 	{  
 		return keyUser;

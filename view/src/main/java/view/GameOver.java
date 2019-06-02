@@ -16,9 +16,9 @@ public class GameOver extends JPanel
 	private static final long serialVersionUID = 1L;
 
 /**
-* Create a new window painted in red with "you lose" written
-* 
-*/
+ * Create a new window painted in red with "you lose" written
+ * 
+ */
 	
 	public static void GameOvers()
 	{		
