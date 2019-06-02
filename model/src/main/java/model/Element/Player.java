@@ -2,17 +2,18 @@ package model.Element;
 
 import model.Map;
 
-public class Player extends Living {
-
+public class Player extends Living 
+{
 	private static String SPRITE = "PLAYER.jpg";
 
-	public Player() {
+	public Player() 
+	{
 		super(SPRITE);
-
 	}
 
 
-	public void destruction(int x, int y,Map map) {
+	public void destruction(int x, int y,Map map) 
+	{
 		death(x, y,map);
 	}
 
@@ -24,10 +25,9 @@ public class Player extends Living {
 	
 
 	
-	public void walkOver(int x, int y, char direction,Map map){
-	
-		death(x,y, map);
-		
+	public void walkOver(int x, int y, char direction,Map map)
+	{
+		death(x,y, map);	
 	}
 
 	public void move(int x, int y,int direction,Map map) 

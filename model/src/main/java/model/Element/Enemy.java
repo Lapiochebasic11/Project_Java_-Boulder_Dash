@@ -104,7 +104,6 @@ switch (direction){
 	}
 
 	public boolean freePlace(int x, int y, Map map){
-		//System.out.println(map.getOnTheMapXY(x, y).getSprite());
 		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.jpg" || map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg"){
 			return true;
 		}
@@ -118,12 +117,19 @@ switch (direction){
 	 * @param x
 	 * @param y
 	 */
-	public void moveUp(int x, int y,Map map ) {
-		if (freePlace( x,  y-1, map)){
+	public void moveUp(int x, int y,Map map ) 
+	{
+		if (freePlace( x,  y-1, map))
+		{
 			map.getOnTheMapXY(x, y-1).walkOver(x, y,'u',map);
 			this.walk = 1; 
 		}
-		else {
+		else if (freePlace( x+1,  y, map) && freePlace( x-1,  y, map) && freePlace( x,  y+1, map) && freePlace( x,  y-1, map)) 
+		{
+			suicide(x, y, map);
+		}
+		else 
+		{
 			move(x, y, 3, map);
 		}
 	}
@@ -135,12 +141,19 @@ switch (direction){
 	 * @param x
 	 * @param y
 	 */
-	public void moveDown(int x, int y,Map map) {
-		if (freePlace( x,  y+1, map)){
+	public void moveDown(int x, int y,Map map) 
+	{
+		if (freePlace( x,  y+1, map))
+		{
 			map.getOnTheMapXY(x, y+1).walkOver(x, y,'d',map);
 			this.walk = 1; 
 		}
-		else {
+		else if (freePlace( x+1,  y, map) && freePlace( x-1,  y, map) && freePlace( x,  y+1, map) && freePlace( x,  y-1, map)) 
+		{
+			suicide(x, y, map);
+		}
+		else 
+		{
 			move(x, y, 0, map);
 		}
 	}
@@ -152,12 +165,19 @@ switch (direction){
 	 * @param x
 	 * @param y
 	 */
-	public void moveLeft(int x, int y,Map map) {
-		if (freePlace( x-1,  y, map)){
+	public void moveLeft(int x, int y,Map map) 
+	{
+		if (freePlace( x-1,  y, map))
+		{
 			map.getOnTheMapXY(x-1, y).walkOver(x, y,'l',map);
 			this.walk = 1; 
 		}
-		else {
+		else if (freePlace( x+1,  y, map) && freePlace( x-1,  y, map) && freePlace( x,  y+1, map) && freePlace( x,  y-1, map)) 
+		{
+			suicide(x, y, map);
+		}
+		else 
+		{			
 			move(x, y, 2, map);
 		}
 	}
@@ -171,16 +191,27 @@ switch (direction){
 	 */
 	public void moveRight(int x, int y,Map map) {
 		
-		if (freePlace( x+1,  y, map)){
+		if (freePlace( x+1,  y, map))
+		{
 			map.getOnTheMapXY(x+1, y).walkOver(x, y,'r',map);
 			this.walk = 1; 
 		}
-		else {
+		else if (freePlace( x+1,  y, map) && freePlace( x-1,  y, map) && freePlace( x,  y+1, map) && freePlace( x,  y-1, map)) 
+		{
+			suicide(x, y, map);
+		}
+		else 
+		{	
 			move(x, y, 1, map);
 		}
 	}
 	
-
-	
+	public void suicide(int x,int y,Map map) 
+	{
+        if (freePlace( x+1,  y, map) && freePlace( x-1,  y, map) && freePlace( x,  y+1, map) && freePlace( x,  y-1, map)) 
+        {
+            death(x,y,map);
+        }
+    }
 
 }

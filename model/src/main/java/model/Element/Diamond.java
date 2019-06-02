@@ -1,22 +1,26 @@
 package  model.Element;
 
 import model.Map;
+import model.Element.SoundBox;
 
 public class Diamond extends Motion implements Moves{
 
 	private static String SPRITE = "DIAMOND.jpg";
-
-	public Diamond() {
+	
+	public Diamond() 
+	{
 		super(SPRITE);
-
 	}
 
 
-	public void walkOver(int x, int y, char direction, Map map) {
+	public void walkOver(int x, int y, char direction, Map map) 
+	{
 		map.setScore(map.getScore() + 1);
 		map.setOnTheMapXY(new Empty(), x, y);
+		SoundBox.diamondget();
 		
-		switch (direction){
+		switch (direction)
+		{
 			case 'u':
 				map.setOnTheMapXY(new Player(), x, y-1);
 				break;

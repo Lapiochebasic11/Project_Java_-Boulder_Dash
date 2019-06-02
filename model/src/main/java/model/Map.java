@@ -18,7 +18,7 @@ public class Map implements IMap {
 	private int exitY;
 	private boolean win = false;
 	private boolean lose = false;
-	public int tableID = 1;
+	public int tableID = 2;
 
 	public Map() throws SQLException 
 	{

@@ -111,12 +111,14 @@ public class Controller
 		{
 			System.out.println("Success");
 			view.GameWin();
+			model.winsound();
 		}
 		
 		else
 		{
 			System.out.println("Loose");
 			view.GameOver();
+			model.losesound();
 		}
 	}
 

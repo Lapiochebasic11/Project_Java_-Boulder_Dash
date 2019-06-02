@@ -1,9 +1,9 @@
 package model;
 
 import java.sql.SQLException;
+import model.Element.*;
 
 public class Model {
-	
 	
 	private Map map;
 
@@ -21,4 +21,18 @@ public class Model {
 		this.map = map;
 	}
 
+	public void winsound()
+	{
+		SoundBox.playerwin();
+	}
+	
+	public void losesound()
+	{
+		SoundBox.playerdie();
+	}
+	
+	public void gametheme()
+	{
+		SoundBox.theme();
+	}
 }

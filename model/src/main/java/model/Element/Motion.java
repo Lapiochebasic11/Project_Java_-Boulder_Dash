@@ -24,30 +24,15 @@ public abstract class Motion extends Element implements Moves {
 		}
 	}
 	
-<<<<<<< HEAD
-	public void move(int x, int y, int direction,Map map) 
-	{
-		
-		if (freePlace(x,y+1,map))
-		{
-=======
 	public void move(int x, int y, int direction,Map map) {
 
 		if (freePlace(x,y+1,map)){
->>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
 			moveDown(x,y,map);
-<<<<<<< HEAD
-			movement = true;	
 		}
 		
-		else
+		else 
 		{
-			movement = false;	
-=======
-			}
 		
-		else {
->>>>>>> branch 'master' of https://github.com/Lapiochebasic11/Project_Java_-Boulder_Dash
 		}
 		
 		
