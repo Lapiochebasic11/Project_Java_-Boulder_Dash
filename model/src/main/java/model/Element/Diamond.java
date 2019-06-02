@@ -3,6 +3,12 @@ package  model.Element;
 import model.Map;
 import model.Element.SoundBox;
 
+/**
+ * 
+ * @author Lilian Schneider
+ * @version 1.0
+ */
+
 public class Diamond extends Motion implements Moves{
 
 	private static String SPRITE = "DIAMOND.jpg";
@@ -12,9 +18,15 @@ public class Diamond extends Motion implements Moves{
 		super(SPRITE);
 	}
 
-
+	/**
+	 * 
+	 * Determine when the player take a diamond
+	 * @param position x y, direction of the player who lunch the method
+	 * @version 1.0
+	 */
 	public void walkOver(int x, int y, char direction, Map map) 
 	{
+
 		if(map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg") 
 		{
 		map.setScore(map.getScore() + 1);
@@ -40,5 +52,4 @@ public class Diamond extends Motion implements Moves{
 		}
 		
 	}
-
 }
