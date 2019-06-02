@@ -5,13 +5,17 @@ import model.Map;
 /**
  * 
  * @author Lilian Schneider
- * @version 1.0
+ * 
  */
 
 public class DiamondFall extends Element {
 
 	private static String SPRITE = "DIAMONDFALL.jpg";
 	boolean movement = true;
+	
+	/**
+	 * @param sprite
+	 */
 	public DiamondFall() {
 		super(SPRITE);
 	}
@@ -22,6 +26,7 @@ public class DiamondFall extends Element {
 	 * @param position x 
 	 * @param position y
 	 * @param map
+	 * @return if the box is able to receive the diamond 
 	 * 
 	 */
 	public boolean freePlace(int x, int y,Map map){

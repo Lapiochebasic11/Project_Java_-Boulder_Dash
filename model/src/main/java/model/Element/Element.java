@@ -13,7 +13,6 @@ public abstract class Element implements IElement{
 	int walk = 0;
 
 	/**
-	 * 
 	 * @param sprite
 	 */
 	public Element(String sprite) {

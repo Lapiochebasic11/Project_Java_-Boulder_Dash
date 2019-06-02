@@ -3,10 +3,19 @@ package model;
 import java.sql.SQLException;
 import model.Element.*;
 
+/**
+ * 
+ * @author Lilian Schneider
+ *
+ */
 public class Model {
 	
 	private Map map;
 
+	/**
+	 * create the map
+	 * @throws SQLException
+	 */
 	public Model() throws SQLException {
 		map = new Map();
 

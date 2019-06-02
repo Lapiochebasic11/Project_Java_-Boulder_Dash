@@ -11,6 +11,9 @@ public class Enemy extends Living implements Moves {
 
 	private static String SPRITE = "ENEMY.jpg";	
 
+	/**
+	 * @param sprite
+	 */
 	public Enemy() {
 		super(SPRITE);
 

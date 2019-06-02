@@ -10,7 +10,9 @@ import model.Map;
 public class Empty extends Element{
 
     public static String SPRITE = "VOID.jpg";
-
+	/**
+	 * @param sprite
+	 */
     Empty(){
         super(SPRITE);
 }

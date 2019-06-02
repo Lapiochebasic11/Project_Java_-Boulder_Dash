@@ -3,10 +3,18 @@ package model.Element;
 import java.io.*;
 import sun.audio.*;
 
+/**
+ * 
+ * @author Emanuel Caracciolo
+ *
+ */
 public class SoundBox 
 {
 	private static AudioStream audio;
 	
+	/**
+	 * make sound when you a diamond
+	 */
 	public static void diamondget()
 	{
 		InputStream music;
@@ -23,6 +31,9 @@ public class SoundBox
 		}
 	}
 	
+	/**
+	 * make sound when you kill a enemy
+	 */
 	public static void enemydie()
 	{
 		InputStream music;
@@ -39,6 +50,9 @@ public class SoundBox
 		}
 	}
 	
+	/**
+	 * make sound when you die
+	 */
 	public static void playerdie()
 	{
 		InputStream music;
@@ -55,6 +69,9 @@ public class SoundBox
 		}
 	}
 	
+	/**
+	 * make sound when you win
+	 */
 	public static void playerwin()
 	{
 		InputStream music;
@@ -71,6 +88,9 @@ public class SoundBox
 		}
 	}
 	
+	/**
+	 * make sound when you start the game
+	 */
 	public static void themestart()
 	{
 		InputStream music;
@@ -87,6 +107,9 @@ public class SoundBox
 		}
 	}
 	
+	/**
+	 * stop sound 
+	 */
 	public static void themestop()
 	{
 		try 

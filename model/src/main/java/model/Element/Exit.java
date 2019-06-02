@@ -11,6 +11,9 @@ public class Exit extends Element {
 
 	private static String SPRITE = "DOOR.jpg";
 
+	/**
+	 * @param sprite
+	 */
 	public Exit() {
 		super(SPRITE);
 

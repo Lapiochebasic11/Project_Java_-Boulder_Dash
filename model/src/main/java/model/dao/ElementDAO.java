@@ -4,6 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * @author Lilian Schneider
+ */
 public abstract class ElementDAO extends AbstractDAO {
 	/**
 	 * Gets the elements of a row in map of lv1

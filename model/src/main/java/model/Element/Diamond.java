@@ -6,13 +6,16 @@ import model.Element.SoundBox;
 /**
  * 
  * @author Lilian Schneider
- * @version 1.0
+ * 
  */
 
 public class Diamond extends Motion implements Moves{
 
 	private static String SPRITE = "DIAMOND.jpg";
 	
+	/**
+	 * @param sprite
+	 */
 	public Diamond() 
 	{
 		super(SPRITE);
@@ -21,8 +24,10 @@ public class Diamond extends Motion implements Moves{
 	/**
 	 * 
 	 * Determine when the player take a diamond
-	 * @param position x y, direction of the player who lunch the method
-	 * @version 1.0
+	 * @param x
+	 * @param y
+	 * @param direction
+	 * @param map 
 	 */
 	public void walkOver(int x, int y, char direction, Map map) 
 	{
