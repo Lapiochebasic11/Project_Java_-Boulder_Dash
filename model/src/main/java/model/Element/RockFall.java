@@ -4,7 +4,7 @@ import model.Map;
 
 /**
  * 
- * @author Utilisateur
+ * @author lilian Schneider
  *
  */
 public class RockFall extends Element {

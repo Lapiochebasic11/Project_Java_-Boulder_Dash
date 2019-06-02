@@ -4,7 +4,7 @@ import model.Map;
 
 /**
  * 
- * @author Lilian Schneider
+ * @author Geoffrey Keff
  *
  */
 public class Empty extends Element{

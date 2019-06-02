@@ -2,6 +2,11 @@ package model.Element;
 
 import model.Map;
 
+/**
+ * 
+ * @author lilian Schneider
+ *
+ */
 public class Rock extends Motion implements Moves {
 
 	private static String SPRITE = "ROCK.jpg";

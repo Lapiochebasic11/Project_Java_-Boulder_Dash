@@ -2,7 +2,7 @@ package  model.Element;
 
 /**
  * 
- * @author Geoffrey Keff
+ * @author lilian Schneider
  *
  */
 public abstract class ElementFactory {
