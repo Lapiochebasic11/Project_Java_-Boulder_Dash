@@ -24,7 +24,7 @@ final class BoulderDashBDDConnector {
 	/**
 	 * The url.
 	 */
-	private static String url = "jdbc:mysql://localhost:3308/boulderdash?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+	private static String url = "jdbc:mysql://localhost/boulderdash?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
 	/**
 	 * The connection.
 	 */
