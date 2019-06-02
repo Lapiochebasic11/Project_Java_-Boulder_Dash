@@ -39,7 +39,6 @@ public class View extends JFrame
 	public void refresh(Model model, int x, int y) throws IOException
 	{
 		this.setContentPane(new FontPanel(model,x ,y));
-		this.addKeyListener(new keyControler());
 		this.setVisible(true);
 	}
 

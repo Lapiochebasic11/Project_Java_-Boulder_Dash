@@ -74,7 +74,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 1; i < 21; i++) {
+				for (int i = 1; i < 16; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 			}
@@ -97,7 +97,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 1; i < 31; i++) {
+				for (int i = 1; i < 16; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 				result.close();
@@ -120,7 +120,7 @@ public abstract class ElementDAO extends AbstractDAO {
 		if (callStatement.execute()){
 			final ResultSet result = callStatement.getResultSet();
 			if (result.next()){
-				for (int i = 1; i < 41; i++) {
+				for (int i = 1; i < 16; i++) {
 					elementsList.add(result.getString(i+1));
 				}
 				result.close();
