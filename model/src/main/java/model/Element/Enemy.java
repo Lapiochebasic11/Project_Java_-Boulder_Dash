@@ -5,9 +5,9 @@ import model.Map;
 /**
  * 
  * @author Geoffrey Keff
- *
+ * @version 1.0
  */
-public class Enemy extends Living implements Moves {
+public class Enemy extends Living {
 
 	private static String SPRITE = "ENEMY.jpg";	
 

@@ -6,16 +6,17 @@ import model.Element.SoundBox;
 /**
  * 
  * @author Lilian Schneider
- * 
+ * @version 1.0
  */
 
-public class Diamond extends Motion implements Moves{
+public class Diamond extends Motion{
 
 	private static String SPRITE = "DIAMOND.jpg";
 	
-	/**
-	 * @param sprite
-	 */
+/**
+ * 
+ * Constructor call
+*/
 	public Diamond() 
 	{
 		super(SPRITE);

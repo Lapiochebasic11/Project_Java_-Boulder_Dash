@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 /**
  * @author Lilian Schneider
+ * @version 1.0
  */
 public abstract class ElementDAO extends AbstractDAO {
 	/**

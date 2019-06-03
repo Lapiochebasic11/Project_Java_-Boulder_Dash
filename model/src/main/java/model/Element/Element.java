@@ -5,9 +5,9 @@ import model.Map;
 /**
  * 
  * @author Lilian Schneider
- *
+ * @version 1.0
  */
-public abstract class Element implements IElement{
+public abstract class Element{
 
 	String sprite;
 	int walk = 0;

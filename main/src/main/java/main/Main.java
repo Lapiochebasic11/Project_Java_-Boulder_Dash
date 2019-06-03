@@ -7,6 +7,11 @@ import controller.Controller;
 import model.Model;
 import view.View;
 
+/**
+ * 
+ * @author Lilian
+ * @version 1.0
+ */
 public abstract class Main 
 {
     public static void main(final String[] args) throws SQLException, IOException

@@ -3,7 +3,7 @@ package model.Element;
 /**
  * 
  * @author Geoffrey Keff
- *
+ * @version 1.0
  */
 public abstract class Living extends Element {
 

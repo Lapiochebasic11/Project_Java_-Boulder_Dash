@@ -5,9 +5,9 @@ import model.Map;
 /**
  * 
  * @author lilian Schneider
- *
+ * @version 1.0
  */
-public class Rock extends Motion implements Moves {
+public class Rock extends Motion {
 
 	private static String SPRITE = "ROCK.jpg";
 

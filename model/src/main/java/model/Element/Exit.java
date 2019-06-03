@@ -5,7 +5,7 @@ import model.Map;
 /**
  * 
  * @author Lilian Schneider
- *
+ * @version 1.0
  */
 public class Exit extends Element {
 

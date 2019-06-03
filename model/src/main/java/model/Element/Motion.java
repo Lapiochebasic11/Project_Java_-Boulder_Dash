@@ -5,10 +5,10 @@ import model.Map;
 /**
  * 
  * @author Lilian Schneider
- *
+ * @version 1.0
  */
 
-public abstract class Motion extends Element implements Moves {
+public abstract class Motion extends Element{
 
 		boolean movement = false;
 		/**

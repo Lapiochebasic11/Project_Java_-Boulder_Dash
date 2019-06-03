@@ -5,7 +5,7 @@ import model.Map;
 /**
  * 
  * @author Geoffrey Keff
- *
+ * @version 1.0
  */
 public class Ground extends Element {
 

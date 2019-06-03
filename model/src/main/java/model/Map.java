@@ -8,7 +8,7 @@ import model.Element.ElementFactory;
 /**
  * 
  * @author Lilian Schneider
- *
+ * @version 1.0
  */
 public class Map  {
 

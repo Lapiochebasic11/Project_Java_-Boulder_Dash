@@ -6,7 +6,7 @@ import model.Element.*;
 /**
  * 
  * @author Lilian Schneider
- *
+ * @version 1.0
  */
 public class Model {
 	

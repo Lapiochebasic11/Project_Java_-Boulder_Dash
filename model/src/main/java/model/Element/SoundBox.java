@@ -6,7 +6,7 @@ import sun.audio.*;
 /**
  * 
  * @author Emanuel Caracciolo
- *
+ * @version 1.0
  */
 public class SoundBox 
 {

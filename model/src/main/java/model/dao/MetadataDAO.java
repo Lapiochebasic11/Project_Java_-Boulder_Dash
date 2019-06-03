@@ -4,10 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * 
- * 
  * @author Lilian Schneider
- * 
+ * @version 1.0
  */
 public abstract class MetadataDAO extends AbstractDAO {
 
