@@ -10,6 +10,7 @@ import sun.audio.*;
  */
 public class SoundBox 
 {
+	@SuppressWarnings("restriction")
 	private static AudioStream audio;
 	
 	/**
@@ -108,7 +109,7 @@ public class SoundBox
 	}
 	
 	/**
-	 * stop sound 
+	 * stop the game sound 
 	 */
 	public static void themestop()
 	{

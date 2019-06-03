@@ -7,7 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * @author vilas
+ * @author Emanuel Caracciolo
  * @version 1.0
  */
 public class GameWin extends JPanel

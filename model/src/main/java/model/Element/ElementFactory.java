@@ -22,8 +22,8 @@ public abstract class ElementFactory {
 	
 	/**
 	 * check if the sprite recover from the BDD exist and return the good element
-	 * @param object
-	 * @return
+	 * @param object implement object
+	 * @return empty
 	 */
 	public static Element getObject(String object) {
 		

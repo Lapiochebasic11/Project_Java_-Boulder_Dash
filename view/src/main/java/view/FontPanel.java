@@ -26,10 +26,10 @@ public class FontPanel extends Container
 /**
  * Load the map with the element on the screen
  * 
- * @param model
- * @param x
- * @param y
- * @throws IOException
+ * @param model call the model
+ * @param x implement X axis
+ * @param y implement Y axis
+ * @throws IOException Signals that an I/O exception of some sort has occurred
  */
 	
 	FontPanel (Model model, int x , int y ) throws IOException

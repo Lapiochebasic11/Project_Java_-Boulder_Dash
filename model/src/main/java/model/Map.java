@@ -27,7 +27,7 @@ public class Map  {
 	/**
 	 * Initialize all variables from the Database and launch the fill of the map
 
-	 * @throws SQLException
+	 * @throws SQLException An exception that provides information on a database accesserror or other errors
 	 */
 	public Map() throws SQLException 
 	{
@@ -42,7 +42,8 @@ public class Map  {
 	
 	/**
 	 * Fill the map of element, using the factory to transform Database strings into Element
-	 * @throws SQLException
+	 * 
+	 * @throws SQLException An exception that provides information on a database accesserror or other errors
 	 */
 	public void fillOnTheMap() throws SQLException {
 		int x,y;
@@ -64,8 +65,9 @@ public class Map  {
 	
 	/**
 	 * give the element location 
-	 * @param x
-	 * @param y
+	 * 
+	 * @param x implement X axis
+	 * @param y implement Y axis
 	 * @return the position of the element 
 	 */
 	public model.Element.Element getOnTheMapXY(int x, int y) {
@@ -75,9 +77,9 @@ public class Map  {
 	
 	/**
 	 * put an element in the map
-	 * @param element
-	 * @param x
-	 * @param y
+	 * @param element call element
+	 * @param x implement X axis
+	 * @param y implement Y axis
 	 */
 	public void setOnTheMapXY(model.Element.Element element, int x, int y) {
 		this.onTheMap[x][y] = element;
@@ -85,7 +87,7 @@ public class Map  {
 	
 	/**
 	 * return the width
-	 * @return width
+	 * @return width 
 	 */
 	public int getWidth() {
 		return this.width;
@@ -93,7 +95,7 @@ public class Map  {
 
 	/**
 	 * set the width 
-	 * @param width
+	 * @param width implement width
 	 */
 	public void setWidth(int width) {
 		this.width = width;
@@ -109,14 +111,14 @@ public class Map  {
 
 	/**
 	 * set the height
-	 * @param height
+	 * @param height implement height
 	 */
 	public void setHeight(int height) {
 		this.height = height;
 	}
 
 	/**
-	 * 
+	 * return the win
 	 * @return win
 	 */
 	public boolean getWin() {
@@ -125,14 +127,14 @@ public class Map  {
 
 	/**
 	 * set win
-	 * @param win
+	 * @param win implement win
 	 */
 	public void setWin(boolean win) {
 		this.win = win;
 	}
 
 	/**
-	 * 
+	 * return the lose
 	 * @return lose
 	 */
 	public boolean getLose() {
@@ -141,7 +143,7 @@ public class Map  {
 
 	/**
 	 * set lose
-	 * @param lose
+	 * @param lose implement lose
 	 */
 	public void setLose(boolean lose) {
 		this.lose = lose;
@@ -149,7 +151,7 @@ public class Map  {
 
 
 	/**
-	 * 
+	 * return the score
 	 * @return score
 	 */
 	public int getScore() {
@@ -159,7 +161,7 @@ public class Map  {
 
 	/**
 	 * set score
-	 * @param score
+	 * @param score implement score
 	 */
 	public void setScore(int score) {
 		this.score = score;
@@ -167,7 +169,7 @@ public class Map  {
 
 
 	/**
-	 * 
+	 * return the score needed
 	 * @return scoreNeeded
 	 */
 	public int getScoreNeeded() {
@@ -177,7 +179,7 @@ public class Map  {
 
 	/**
 	 * set score needed
-	 * @param scoreNeeded
+	 * @param scoreNeeded implement scoreNeeded
 	 */
 	public void setScoreNeeded(int scoreNeeded) {
 		this.scoreNeeded = scoreNeeded;
@@ -185,7 +187,7 @@ public class Map  {
 
 
 	/**
-	 * 
+	 * return the exit X axis for the exit
 	 * @return exit position x
 	 */
 	public int getExitX() {
@@ -195,7 +197,7 @@ public class Map  {
 
 	/**
 	 * set exit position x
-	 * @param exitX
+	 * @param exitX implement exitX
 	 */
 	public void setExitX(int exitX) {
 		this.exitX = exitX;
@@ -203,7 +205,7 @@ public class Map  {
 
 
 	/**
-	 * 
+	 * return the exit Y axis for the exit
 	 * @return exit position y
 	 */
 	public int getExitY() {
@@ -213,7 +215,7 @@ public class Map  {
 
 	/**
 	 * set exit position y
-	 * @param exitY
+	 * @param exitY implement exitY
 	 */
 	public void setExitY(int exitY) {
 		this.exitY = exitY;

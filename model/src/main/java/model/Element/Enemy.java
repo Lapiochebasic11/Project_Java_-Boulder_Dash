@@ -21,9 +21,9 @@ public class Enemy extends Living {
 
 	/**
 	 * Kill the enemy when it is destroyed
-	 * @param position x
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void destruction(int x, int y, Map map) {
 		map.setOnTheMapXY(new Empty(), x, y);
@@ -32,9 +32,10 @@ public class Enemy extends Living {
 	
 	/**
 	 * kill the enemy when he hurt something
-	 * @param position x
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param direction implement direction
+	 * @param map call Map
 	 */
 
 	public void walkOver(int x, int y, char direction, Map map) {
@@ -65,9 +66,9 @@ switch (direction){
 
 	/**
 	 * Explode when the enemy dies
-	 * @param position x
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call map
 	 */
 	public void death(int x, int y, Map map) {
 		int i,j;
@@ -87,11 +88,11 @@ switch (direction){
 	
 
 	/**
-	 *	determine the conduct of the enemy
-	 * @param position x
-	 * @param position y
-	 * @param direction
-	 * @param map
+	 * determine the conduct of the enemy
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param direction implement direction
+	 * @param map call map
 	 */
 	public void move(int x, int y,int direction, Map map ) {
 		
@@ -126,25 +127,28 @@ switch (direction){
 
 	/**
 	 * check if the enemy can go on the box
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call map
 	 * @return the box is empty or not
 	 */
-	public boolean freePlace(int x, int y, Map map){
-		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.jpg" || map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg"){
+	public boolean freePlace(int x, int y, Map map)
+	{
+		if(map.getOnTheMapXY(x, y).getSprite()=="VOID.jpg" || map.getOnTheMapXY(x, y).getSprite()=="PLAYER.jpg")
+		{
 			return true;
 		}
-		else {
+		else 
+		{
 			return false;
 		}
 		
 	}
 	/**
 	 *
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 */
 	public void moveUp(int x, int y,Map map ) 
 	{
@@ -163,9 +167,9 @@ switch (direction){
 	
 	/**
 	 *
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 */
 	public void moveDown(int x, int y,Map map) 
 	{
@@ -184,9 +188,9 @@ switch (direction){
 
 	/**
 	 *
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 */
 	public void moveLeft(int x, int y,Map map) 
 	{
@@ -205,9 +209,9 @@ switch (direction){
 	
 	/**
 	 *
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 */
 	public void moveRight(int x, int y,Map map) {
 		

@@ -22,10 +22,10 @@ public class Rock extends Motion {
 	/**
 	 * 
 	 * Determine when the player push the rock 
-	 * @param x
-	 * @param y
-	 * @param direction
-	 * @param map 
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
+	 * @param direction implement direction
 	 */
 	public void walkOver(int x, int y, char direction,Map map) {
 

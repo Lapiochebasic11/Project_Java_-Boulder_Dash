@@ -22,9 +22,9 @@ public class Player extends Living
 
 	/**
 	 * delete the object
-	 * @param x
-	 * @param y
-	 * @param map 
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void destruction(int x, int y,Map map) 
 	{
@@ -34,9 +34,9 @@ public class Player extends Living
 
 	/**
 	 * used to kill end the game when the player is dead
-	 * @param x
-	 * @param y
-	 * @param map 
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void death(int x, int y,Map map) 
 	{
@@ -46,10 +46,10 @@ public class Player extends Living
 
 	/**
 	 * Determine the action when you walk on different kind of object
-	 * @param x
-	 * @param y
-	 * @param direction
-	 * @param map 
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
+	 * @param direction implement direction 
 	 */
 	public void walkOver(int x, int y, char direction,Map map)
 	{
@@ -58,10 +58,10 @@ public class Player extends Living
 
 	/**
 	 * Determine where the player move
-	 * @param x
-	 * @param y
-	 * @param direction
-	 * @param map  
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
+	 * @param direction implement direction 
 	 */
 	public void move(int x, int y,int direction,Map map) 
 	{		
@@ -84,9 +84,9 @@ public class Player extends Living
 
 	/**
 	 * 
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void moveUp(int x, int y,Map map) {
 		map.getOnTheMapXY(x, y-1).walkOver(x,y,'u',map);
@@ -95,9 +95,9 @@ public class Player extends Living
 
 	/**
 	 * 
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void moveDown(int x, int y,Map map) {
 		map.getOnTheMapXY(x, y+1).walkOver(x,y,'d',map);
@@ -107,9 +107,9 @@ public class Player extends Living
 
 	/**
 	 * 
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void moveLeft(int x, int y,Map map) {
 		map.getOnTheMapXY(x-1, y).walkOver(x,y,'l',map);
@@ -118,9 +118,9 @@ public class Player extends Living
 
 	/**
 	 * 
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void moveRight(int x, int y,Map map) {
 		map.getOnTheMapXY(x+1, y).walkOver(x,y,'r',map);

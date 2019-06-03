@@ -18,7 +18,7 @@ public class Controller
 /**
  * The game is being played, it prints the game in the console and detect if the player win or lose
  * 
- * @throws IOException
+ * @throws IOException Signals that an I/O exception of some sort has occurred
  */
 	public void play() throws IOException 
 	{
@@ -157,8 +157,8 @@ public class Controller
 /**
  * Appoint model and view objects
  * 
- * @param view
- * @param model
+ * @param view call view
+ * @param model call model
  */
 	public Controller(View view, Model model) 
 	{
@@ -169,7 +169,7 @@ public class Controller
 /**
  * Appoint model object
  * 
- * @param model
+ * @param model call model
  */
 	public void setModel(Model model) 
 	{
@@ -179,7 +179,7 @@ public class Controller
 /**
  * Appoint view object
  * 
- * @param view
+ * @param view call view
  */
 	public void setView(View view) 
 	{

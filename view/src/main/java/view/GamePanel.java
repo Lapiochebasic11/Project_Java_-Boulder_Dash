@@ -10,7 +10,7 @@ import javax.swing.JPanel;
  * @author Emanuel Caracciolo
  * @version 1.0
  * 
- * @param <mainFrame>
+ * @param <mainFrame> class type
  */
 
 public class GamePanel<mainFrame> extends JPanel
@@ -24,7 +24,7 @@ public class GamePanel<mainFrame> extends JPanel
 /**
  * Appoint image object
  * 
- * @param image
+ * @param image call image
  */
 	public GamePanel(Image image) 
 	{ 
@@ -43,7 +43,7 @@ public class GamePanel<mainFrame> extends JPanel
 /**
  * Draw the component and make it visible
  * 
- * @param g
+ * @param g call a graphic context
  */
 	protected void paintComponent(Graphics g) 
 	{

@@ -22,9 +22,9 @@ public class RockFall extends Element {
 
 	/**
 	 * check if the rock can continue to fall
-	 * @param position x 
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 * @return if the box is able to receive the rock 
 	 * 
 	 */
@@ -42,10 +42,10 @@ public class RockFall extends Element {
 	 * 
 	 * 
 	 *Defines in which direction the rock has to fall or if he has to stop falling
-	 * @param position x
-	 * @param position y
-	 * @param direction 
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
+	 * @param direction implement direction
 	 * 
 	 */
 	public void move(int x, int y, int direction,Map map) {
@@ -72,9 +72,9 @@ public class RockFall extends Element {
 	
 	/**
 	 * 
-	 * @param position x
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	
 	public void moveDown(int x, int y,Map map){
@@ -84,23 +84,22 @@ public class RockFall extends Element {
 	
 /**
  * 
- * @param position x
- * @param position y
- * @param map
- */
+ * @param x implement X axis
+ * @param y implement Y axis
+ * @param map call Map
+*/
 	public void moveLeft(int x, int y,Map map){
-		map.getOnTheMapXY(x+1, y).walkOver(x, y, 'l',map);
+		map.getOnTheMapXY(x-1, y).walkOver(x, y, 'l',map);
 	}
 
-	/**
-	 * 
-	 * @param x
-	 * @param y
-	 * @param map
-	 */
+/**
+ * 
+ * @param x implement X axis
+ * @param y implement Y axis
+ * @param map call Map
+*/
 	public void moveRight(int x, int y,Map map){
-		map.getOnTheMapXY(x-1, y).walkOver(x, y, 'r',map);
+		map.getOnTheMapXY(x+1, y).walkOver(x, y, 'r',map);
 	}
 	
 }
-

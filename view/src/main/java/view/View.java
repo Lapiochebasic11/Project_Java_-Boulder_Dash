@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import model.Model; 
 
 /** 
- * @author Pierre-Olivier
+ * @author Pierre-Olivier Schaller
  * @version 1.0
  */
 public class View extends JFrame
@@ -22,7 +22,7 @@ public class View extends JFrame
 /**
  * Appoints model object
  * 
- * @param model
+ * @param model call model
  */
 	public View(Model model) 
 	{
@@ -32,9 +32,9 @@ public class View extends JFrame
 /**
  * Creates a window in wich the game is display
  * 
- * @param x
- * @param y
- * @throws IOException
+ * @param x implement X axis
+ * @param y implement Y axis
+ * @throws IOException Signals that an I/O exception of some sort has occurred
  */
 	public void show(int x , int y) throws IOException  
 	{	
@@ -55,14 +55,14 @@ public class View extends JFrame
 /**
  * Allows visibility and sets the contentPane property
  * 
- * @param model
- * @param x
- * @param y
- * @throws IOException
+ * @param model call model
+ * @param x implement X axis
+ * @param y implement Y axis
+ * @throws IOException Signals that an I/O exception of some sort has occurred
  */
 	public void refresh(Model model, int x, int y) throws IOException
 	{
-		this.setContentPane(new FontPanel(model,x ,y));
+		this.setContentPane(new FontPanel(model, x ,y));
 		this.setVisible(true);
 	}
 
@@ -87,7 +87,7 @@ public class View extends JFrame
 /**
  * Appoints mainframe object
  * 
- * @param mainFrame
+ * @param mainFrame calls a frame
  */
 	public void setMainFrame(JFrame mainFrame) 
 	{

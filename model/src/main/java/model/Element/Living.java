@@ -9,16 +9,17 @@ public abstract class Living extends Element {
 
 	/**
 	 * Constructor call
-	 * @param sprite
+	 * @param SPRITE implement sprite
 	 */
-	public Living(String SPRITE) {
+	public Living(String SPRITE) 
+	{
 		super(SPRITE);
 	}
 /**
  * 
- * @param x
- * @param y
- * @param map
+ * @param x implement X axis
+ * @param y implement Y axis
+ * @param map call Map
  */
 	public void death(int x, int y, model.Map map) {
 	}
