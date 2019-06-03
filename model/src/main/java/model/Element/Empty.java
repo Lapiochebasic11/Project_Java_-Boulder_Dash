@@ -11,7 +11,7 @@ public class Empty extends Element{
 
     public static String SPRITE = "VOID.jpg";
 	/**
-	 * @param sprite
+	 * Constructor call
 	 */
     Empty(){
         super(SPRITE);

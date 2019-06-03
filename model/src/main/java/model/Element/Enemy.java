@@ -12,7 +12,7 @@ public class Enemy extends Living {
 	private static String SPRITE = "ENEMY.jpg";	
 
 	/**
-	 * @param sprite
+	 * Constructor call
 	 */
 	public Enemy() {
 		super(SPRITE);

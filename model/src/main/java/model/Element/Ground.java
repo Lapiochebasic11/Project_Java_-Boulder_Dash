@@ -11,6 +11,9 @@ public class Ground extends Element {
 
 	private static String SPRITE = "SOIL.jpg";
 	
+	/*
+	 * Constructor call
+	 */
 	public Ground() 
 	{
 		super(SPRITE);

@@ -12,7 +12,7 @@ public class Rock extends Motion {
 	private static String SPRITE = "ROCK.jpg";
 
 	/**
-	 * @param sprite
+	 * Constructor call
 	 */
 	public Rock() {
 		super(SPRITE);

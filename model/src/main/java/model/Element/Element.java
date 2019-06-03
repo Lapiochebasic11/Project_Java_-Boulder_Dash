@@ -14,6 +14,7 @@ public abstract class Element{
 
 	/**
 	 * @param sprite
+	 * Constructor call
 	 */
 	public Element(String sprite) {
 		this.sprite = sprite;

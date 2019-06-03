@@ -8,6 +8,7 @@ package model.Element;
 public abstract class Living extends Element {
 
 	/**
+	 * Constructor call
 	 * @param sprite
 	 */
 	public Living(String SPRITE) {

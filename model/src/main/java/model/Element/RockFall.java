@@ -13,7 +13,7 @@ public class RockFall extends Element {
 	boolean movement = true;
 	
 	/**
-	 * @param sprite
+	 * Constructor call
 	 */
 	public RockFall() {
 		super(SPRITE);

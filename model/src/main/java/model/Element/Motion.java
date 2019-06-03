@@ -12,7 +12,7 @@ public abstract class Motion extends Element{
 
 		boolean movement = false;
 		/**
-		 * 
+		 * Constructor call
 		 * @param sprite
 		 */
 	public Motion(String sprite ) {

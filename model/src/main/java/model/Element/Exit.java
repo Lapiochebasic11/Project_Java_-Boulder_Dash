@@ -12,7 +12,7 @@ public class Exit extends Element {
 	private static String SPRITE = "DOOR.jpg";
 
 	/**
-	 * @param sprite
+	 * Constructor call
 	 */
 	public Exit() {
 		super(SPRITE);

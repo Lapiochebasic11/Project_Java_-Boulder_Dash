@@ -14,7 +14,7 @@ public class DiamondFall extends Element {
 	boolean movement = true;
 	
 	/**
-	 * @param sprite
+	 * Constructor call
 	 */
 	public DiamondFall() {
 		super(SPRITE);

@@ -12,7 +12,7 @@ public class Player extends Living
 	private static String SPRITE = "PLAYER.jpg";
 
 	/**
-	 * @param sprite
+	 * Constructor call
 	 */
 	public Player() 
 	{
