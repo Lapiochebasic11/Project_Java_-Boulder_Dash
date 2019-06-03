@@ -15,7 +15,7 @@
 		<module>main</module>
 		<module>controller</module>
 		<module>model</module>
-		<module>entity</module>
+		
 	</modules>
 	<dependencies>
 		<dependency>
