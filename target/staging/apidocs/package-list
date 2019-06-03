@@ -1,6 +1,7 @@
-contract
 controller
 entity
 main
 model
+model.Element
+model.dao
 view
