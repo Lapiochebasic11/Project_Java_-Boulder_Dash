@@ -29,7 +29,7 @@ public abstract class MetadataDAO extends AbstractDAO {
 	private static String sqlMapMetadataDoorY = "{call findMapMetadataDoorY(?)}";
 	/**
 	 * Gets the height of the map
-	 * @param idLevel 
+	 * @param idLevel implement idlevel
 	 * @return the height of the map
 	 * @throws SQLException the SQL exception
 	 */
@@ -49,6 +49,12 @@ public abstract class MetadataDAO extends AbstractDAO {
 		return height;
 	}
 	
+	/**
+	 * Gets the width of the map
+	 * @param idLevel implement idlevel
+	 * @return the width of the map
+	 * @throws SQLException the SQL exception
+	 */
 	public static int getMapMetadataWidth(final int idLevel) throws SQLException {
 		final java.sql.CallableStatement callStatement = prepareCall(sqlMapMetadataWidth);
 		int width = 0;
@@ -65,6 +71,12 @@ public abstract class MetadataDAO extends AbstractDAO {
 		return width;
 	}
 
+	/**
+	 * Gets the score needed of the map
+	 * @param idLevel implement idlevel
+	 * @return the diamondsneeded of the map
+	 * @throws SQLException the SQL exception
+	 */
 	public static int getMapMetadataScoreNeed(final int idLevel) throws SQLException {
 		final java.sql.CallableStatement callStatement = prepareCall(sqlMapMetadataDiamondsNeeded);
 		int diamondsNeeded = 0;
@@ -83,7 +95,7 @@ public abstract class MetadataDAO extends AbstractDAO {
 
 	/**
 	 * Gets the door X coordinate of the map
-	 * @param idLevel
+	 * @param idLevel implement idlevel
 	 * @return  the door X coordinate
 	 * @throws SQLException the SQL exception
 	 */
@@ -105,7 +117,7 @@ public abstract class MetadataDAO extends AbstractDAO {
 
 	/**
 	 * Gets the door Y coordinate of the map
-	 * @param idLevel
+	 * @param idLevel implement idlevel
 	 * @return the the door Y
 	 * @throws SQLException the SQL exception
 	 */

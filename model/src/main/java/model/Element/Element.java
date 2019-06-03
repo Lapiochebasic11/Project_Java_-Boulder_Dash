@@ -13,7 +13,7 @@ public abstract class Element{
 	int walk = 0;
 
 	/**
-	 * @param sprite
+	 * @param sprite implement sprite
 	 * Constructor call
 	 */
 	public Element(String sprite) {
@@ -29,9 +29,9 @@ public abstract class Element{
 
 	/**
 	 * use to delete a Object
-	 * @param position x 
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 */
 	public void destruction(int x, int y, Map map) {
 
@@ -39,9 +39,10 @@ public abstract class Element{
 
 	/**
 	 * use if object are at the same position 
-	 * @param position x 
-	 * @param position y
-	 * @param map 
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param direction implement direction
+	 * @param map implement map
 	 */
 	
 	public void walkOver(int x, int y, char direction, Map map) {
@@ -50,24 +51,28 @@ public abstract class Element{
 
 	/**
 	 * use when object move
-	 * @param position x 
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param direction implement direction
+	 * @param map implement map
 	 */
 	public void move(int x, int y, int direction, Map map) {
 
 	}
+	
 	/**
 	 * delete a Object
-	 * @return 
-	 * 
+	 * @return walk
 	 * 
 	 */
-	
 	public int isWalk() {
 		return walk;
 	}
 
+	/**
+	 * 
+	 * @param walk implement walk
+	 */
 	public void setWalk(int walk) {
 		this.walk = walk;
 	}

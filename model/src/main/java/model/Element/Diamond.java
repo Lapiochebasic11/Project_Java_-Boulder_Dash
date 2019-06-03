@@ -25,10 +25,10 @@ public class Diamond extends Motion{
 	/**
 	 * 
 	 * Determine when the player take a diamond
-	 * @param x
-	 * @param y
-	 * @param direction
-	 * @param map 
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param direction implement direction
+	 * @param map implement map
 	 */
 	public void walkOver(int x, int y, char direction, Map map) 
 	{

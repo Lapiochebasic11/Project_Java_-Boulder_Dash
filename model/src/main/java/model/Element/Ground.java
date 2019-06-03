@@ -21,9 +21,9 @@ public class Ground extends Element {
 	
 	/**
 	 * Determine when you walk on the ground
-	 * @param position x
-	 * @param position y
-	 * @param map 
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map
 	 */
 	public void walkOver(int x, int y, char direction,Map map) {
 		switch (direction){
@@ -46,9 +46,9 @@ public class Ground extends Element {
 	
 	/**
 	 * Change the ground to empty
-	 * @param position x
-	 * @param position y
-	 * @param map  
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map call Map 
 	 */
 	public void destruction(int x, int y,Map map) {
 		map.setOnTheMapXY(new Empty(), x, y);

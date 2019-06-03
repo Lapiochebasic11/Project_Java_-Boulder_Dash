@@ -10,11 +10,13 @@ import sun.audio.*;
  */
 public class SoundBox 
 {
+	@SuppressWarnings("restriction")
 	private static AudioStream audio;
 	
 	/**
 	 * make sound when you a diamond
 	 */
+	@SuppressWarnings("restriction")
 	public static void diamondget()
 	{
 		InputStream music;
@@ -34,6 +36,7 @@ public class SoundBox
 	/**
 	 * make sound when you kill a enemy
 	 */
+	@SuppressWarnings("restriction")
 	public static void enemydie()
 	{
 		InputStream music;
@@ -53,6 +56,7 @@ public class SoundBox
 	/**
 	 * make sound when you die
 	 */
+	@SuppressWarnings("restriction")
 	public static void playerdie()
 	{
 		InputStream music;
@@ -72,6 +76,7 @@ public class SoundBox
 	/**
 	 * make sound when you win
 	 */
+	@SuppressWarnings("restriction")
 	public static void playerwin()
 	{
 		InputStream music;
@@ -91,6 +96,7 @@ public class SoundBox
 	/**
 	 * make sound when you start the game
 	 */
+	@SuppressWarnings("restriction")
 	public static void themestart()
 	{
 		InputStream music;
@@ -108,8 +114,9 @@ public class SoundBox
 	}
 	
 	/**
-	 * stop sound 
+	 * stop the game sound 
 	 */
+	@SuppressWarnings("restriction")
 	public static void themestop()
 	{
 		try 

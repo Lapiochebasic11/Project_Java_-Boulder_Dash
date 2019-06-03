@@ -19,12 +19,12 @@ public class Empty extends Element{
 
     /**
      * able to walk on the empty box 
-     * @param position x
-     * @param position y
-     * @param direction
-     * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param direction implement direction
+	 * @param map call map
      */
-    public void walkOver(int x, int y, char direction,Map map) 
+    public void walkOver(int x, int y, char direction, Map map) 
     {
         switch (direction)
         {

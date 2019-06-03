@@ -4,7 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 /**
- * @author vilas
+ * @author Emanuel Caracciolo
  * @version 1.0
  */
 public class keyControler implements KeyListener 
@@ -14,7 +14,7 @@ public class keyControler implements KeyListener
 /**
  * Invoked when a key has been pressed
  * 
- * @param e
+ * @param e calls when a key is pressed
  */
 
     public void keyPressed(KeyEvent e) 
@@ -25,7 +25,7 @@ public class keyControler implements KeyListener
 /**
  * Invoked when a key has been released
  * 
- * @param e
+ * @param e calls when a key is pressed
  */
     public void keyReleased(KeyEvent e) 
     {
@@ -35,7 +35,7 @@ public class keyControler implements KeyListener
 /**
  * Invoked when a key has been typed
  * 
- * @param e
+ * @param e calls when a key is pressed
  */
     public void keyTyped(KeyEvent e) 
     {

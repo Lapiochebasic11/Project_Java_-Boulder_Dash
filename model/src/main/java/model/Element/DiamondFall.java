@@ -23,9 +23,9 @@ public class DiamondFall extends Element {
 
 	/**
 	 * check if the diamond can continue to fall
-	 * @param position x 
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 * @return if the box is able to receive the diamond 
 	 * 
 	 */
@@ -44,10 +44,10 @@ public class DiamondFall extends Element {
 	 * 
 	 * 
 	 *Defines in which direction the diamond has to fall or if he has to stop falling
-	 * @param position x
-	 * @param position y
-	 * @param direction 
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param direction implement direction
+	 * @param map implement map
 	 * 
 	 */
 	public void move(int x, int y, int direction,Map map) {
@@ -73,9 +73,9 @@ public class DiamondFall extends Element {
 	
 	/**
 	 * 
-	 * @param position x
-	 * @param position y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 */
 	
 	public void moveDown(int x, int y,Map map){
@@ -85,9 +85,9 @@ public class DiamondFall extends Element {
 	
 /**
  * 
- * @param position x
- * @param position y
- * @param map
+ * @param x implement X axis
+ * @param y implement Y axis
+ * @param map implement map
  */
 	public void moveLeft(int x, int y,Map map){
 		map.getOnTheMapXY(x-1, y).walkOver(x, y, 'l',map);
@@ -95,9 +95,9 @@ public class DiamondFall extends Element {
 
 	/**
 	 * 
-	 * @param x
-	 * @param y
-	 * @param map
+	 * @param x implement X axis
+	 * @param y implement Y axis
+	 * @param map implement map
 	 */
 	public void moveRight(int x, int y,Map map){
 		map.getOnTheMapXY(x+1, y).walkOver(x, y, 'r',map);

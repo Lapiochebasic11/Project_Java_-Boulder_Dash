@@ -33,7 +33,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	/**
 	 * Gets the elements of a row in map of lv1
 	 * @param row needed
-	 * @return  the elements of a row 
+	 * @return the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
 	private static ArrayList<String> getMapElementLv1(int row) throws SQLException {
@@ -53,6 +53,12 @@ public abstract class ElementDAO extends AbstractDAO {
 		return elementsList;
 	}
 	
+	/**
+	 * Gets the elements of a row in map of lv2
+	 * @param row needed
+	 * @return the elements of a row 
+	 * @throws SQLException the SQL exception
+	 */
 	private static ArrayList<String> getMapElementLv2(int row) throws SQLException {
 		row += 1;
 		final ArrayList<String> elementsList = new ArrayList<String>(); 
@@ -70,6 +76,12 @@ public abstract class ElementDAO extends AbstractDAO {
 		return elementsList;
 	}
 
+	/**
+	 * Gets the elements of a row in map of lv3
+	 * @param row needed
+	 * @return  the elements of a row 
+	 * @throws SQLException the SQL exception
+	 */
 	private static ArrayList<String> getMapElementLv3(int row) throws SQLException {
 		row += 1;
 		final ArrayList<String> elementsList = new ArrayList<String>(); 
@@ -113,7 +125,7 @@ public abstract class ElementDAO extends AbstractDAO {
 	/**
 	 * Gets the elements of a row in map of lv5
 	 * @param row needed
-	 * @return  the elements of a row 
+	 * @return the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
 	private static ArrayList<String> getMapElementLv5(int row) throws SQLException {
@@ -135,8 +147,10 @@ public abstract class ElementDAO extends AbstractDAO {
 	
 	/**
 	 * Gets the list of elements of a row and return the element of a column of the row
-	 * @param idLevel,row , column 
-	 * @return  the elements of a row 
+	 * @param idLevel implement idlevel
+	 * @param column implement column
+	 * @param row implement row
+	 * @return the elements of a row 
 	 * @throws SQLException the SQL exception
 	 */
 	public static String getElement (int idLevel, int column, int row) throws SQLException{

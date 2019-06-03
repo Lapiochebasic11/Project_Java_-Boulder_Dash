@@ -14,6 +14,13 @@ import view.View;
  */
 public abstract class Main 
 {
+
+/**
+ * 
+ * @param args main parameter
+ * @throws SQLException An exception that provides information on a database accesserror or other errors
+ * @throws IOException Signals that an I/O exception of some sort has occurred
+ */
     public static void main(final String[] args) throws SQLException, IOException
     {    	
     	Model model = new Model();
