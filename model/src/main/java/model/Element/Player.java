@@ -7,7 +7,7 @@ import model.Map;
  * @author Geoffrey Keff
  * @version 1.0
  */
-public class Player extends Living 
+public class Player extends Element 
 {
 	private static String SPRITE = "PLAYER.jpg";
 

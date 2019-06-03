@@ -8,8 +8,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import view.View;
-
 public class ViewTest {
 
     @BeforeClass
@@ -23,8 +21,7 @@ public class ViewTest {
 
     @Before
     public void setUp() throws Exception {
-        @SuppressWarnings("unused")
-		View test = new View(null);
+
     }
 
     @After
